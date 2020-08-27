@@ -1,0 +1,3077 @@
+<mamecheat version="1">
+
+  <cheat desc="Infinite Time">
+    <script state="run">
+      <action>maincpu.pb@FF8109=63</action>
+    </script>
+  </cheat>
+  
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Ryu easy special moves"/>
+  <cheat desc="HADOKEN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x0">maincpu.pw@FF8580=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="SHORYUKEN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x0">maincpu.pw@FF8588=204</action>
+    </script>
+  </cheat>
+  <cheat desc="TATSUMAKI SENPUKYAKU">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x0">maincpu.pw@FF8590=204</action>
+    </script>
+  </cheat>
+  <cheat desc="SHINKU HADOKEN">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">df,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x0 and maincpu.pw@FF8598 LT 0x20A and param == 1">maincpu.pw@FF8598=20A</action>
+      <action condition="maincpu.pb@FF8502==0x0 and maincpu.pw@FF8598 LT 0x20A and param == 2">maincpu.pw@FF8598=208</action>
+    </script>
+  </cheat>
+  <cheat desc="SHINKU TATSUMAKI SENPUKYAKU">
+    <parameter>
+      <item value="0x1">db+K</item>
+      <item value="0x2">d,db+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x0 and param == 1 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=208</action>
+      <action condition="maincpu.pb@FF8502==0x0 and param == 2 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=206</action>
+    </script>
+  </cheat>
+  <cheat desc="HADO NO KAMAE(f+START)">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x0">maincpu.pw@FF85A8=204</action>
+    </script>
+  </cheat>
+  <cheat desc="SHAKUNETSU HADOKEN"><comment>This conflicts with HADOKEN.</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x0">maincpu.pw@FF85B0=208</action>
+    </script>
+  </cheat>
+  <cheat desc="METSU SHORYUKEN">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x0 and param == 1 and maincpu.pw@FF85B8 LT 208">maincpu.pw@FF85B8=208</action>
+      <action condition="maincpu.pb@FF8502==0x0 and param == 2 and maincpu.pw@FF85B8 LT 208">maincpu.pw@FF85B8=206</action>
+    </script>
+  </cheat>
+  
+  <cheat desc=" "/>
+  <cheat desc="P1 Ken easy special moves"/>
+  <cheat desc="HADOKEN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1">maincpu.pw@FF8580=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="SHORYUKEN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1">maincpu.pw@FF8588=204</action>
+    </script>
+  </cheat>
+  <cheat desc="TATSUMAKI SENPUKYAKU">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1">maincpu.pw@FF8590=204</action>
+    </script>
+  </cheat>
+  <cheat desc="SHINRYUKEN">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1 and maincpu.pw@FF8598 LT 0x208 and param == 1">maincpu.pw@FF8598=208</action>
+      <action condition="maincpu.pb@FF8502==0x1 and maincpu.pw@FF8598 LT 0x206 and param == 2">maincpu.pw@FF8598=206</action>
+    </script>
+  </cheat>
+  <cheat desc="SHORYU REPPA">
+    <parameter>
+      <item value="0x1">df+P</item>
+      <item value="0x2">d,df+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1 and param == 1 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=208</action>
+      <action condition="maincpu.pb@FF8502==0x1 and param == 2 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=206</action>
+    </script>
+  </cheat>
+  <cheat desc="ZENPO TENSHIN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1">maincpu.pw@FF85A8=204</action>
+    </script>
+  </cheat>
+  <cheat desc="ZENTO"><comment>QCF+START ==> f+START</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1">maincpu.pw@FF85B0=204</action>
+    </script>
+  </cheat>
+  <cheat desc="SHIPPUJINRAI KYAKU">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1 and param == 1 and maincpu.pw@FF85B8 LT 208">maincpu.pw@FF85B8=208</action>
+      <action condition="maincpu.pb@FF8502==0x1 and param == 2 and maincpu.pw@FF85B8 LT 208">maincpu.pw@FF85B8=206</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Akuma easy special moves"/>
+  <cheat desc="GO HADOKEN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x2">maincpu.pw@FF8580=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="GO SHORYUKEN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x2">maincpu.pw@FF8588=204</action>
+    </script>
+  </cheat>
+  <cheat desc="TATSUMAKI SENPUKYAKU">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x2">maincpu.pw@FF8590=204</action>
+    </script>
+  </cheat>
+  <cheat desc="MESSASTU GO HADO">
+    <parameter>
+      <item value="0x1">b+P</item>
+      <item value="0x2">db,b+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x2 and maincpu.pw@FF8598 LT 0x210 and param == 1">maincpu.pw@FF8598=210</action>
+      <action condition="maincpu.pb@FF8502==0x2 and maincpu.pw@FF8598 LT 0x210 and param == 2">maincpu.pw@FF8598=20E</action>
+    </script>
+  </cheat>
+  <cheat desc="MESSATSU GO SHORYU">
+    <parameter>
+      <item value="0x1">df+P</item>
+      <item value="0x2">d,df+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x2 and param == 1 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=208</action>
+      <action condition="maincpu.pb@FF8502==0x2 and param == 2 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=206</action>
+    </script>
+  </cheat>
+  <cheat desc="ASHURA SENKU(FORWARD)"><comment>df+3P/3K</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x2">maincpu.pw@FF85A8=204</action>
+    </script>
+  </cheat>
+  <cheat desc="ASHURA SENKU(BACK)"><comment>db+3P/3K</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x2">maincpu.pw@FF85B0=204</action>
+    </script>
+  </cheat>
+  <cheat desc="TENMA GO ZANKU">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">df,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x2 and param == 1 and maincpu.pw@FF85B8 LT 20A">maincpu.pw@FF85B8=20A</action>
+      <action condition="maincpu.pb@FF8502==0x2 and param == 2 and maincpu.pw@FF85B8 LT 20A">maincpu.pw@FF85B8=208</action>
+    </script>
+  </cheat>
+  <cheat desc="SHAKUNETSU HADOKEN"><comment>conflict with ZENPO TENSHIN</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x2">maincpu.pw@FF85C0=208</action>
+    </script>
+  </cheat>
+  <cheat desc="SHUN GOKU SATSU">
+    <parameter>
+      <item value="0x1">HP</item>
+      <item value="0x2">LK,HP</item>
+      <item value="0x3">f,LK,HP</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x2 and param == 1 and maincpu.pw@FF85C8 LT 208">maincpu.pw@FF85C8=208</action>
+      <action condition="maincpu.pb@FF8502==0x2 and param == 2 and maincpu.pw@FF85C8 LT 206">maincpu.pw@FF85C8=206</action>
+      <action condition="maincpu.pb@FF8502==0x2 and param == 3 and maincpu.pw@FF85C8 LT 204">maincpu.pw@FF85C8=204</action>
+    </script>
+  </cheat>
+  <cheat desc="ZENPO TENSHIN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x2">maincpu.pw@FF85D0=204</action>
+    </script>
+  </cheat>
+  <cheat desc="HYAKKISHU"><comment>uf+P</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x2">maincpu.pw@FF85D8=206</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Charlie easy special moves"/>
+  <cheat desc="SOMERSAULT SHELL">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x3">maincpu.pw@FF8580=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="SONIC BOOM">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x3">maincpu.pw@FF8588=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="CROSSFIRE BLITZ">
+    <parameter>
+      <item value="0x1">f+K</item>
+      <item value="0x2">b,f+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x3 and maincpu.pw@FF8590 LT 608 and param == 1">maincpu.pw@FF8590=608</action>
+      <action condition="maincpu.pb@FF8502==0x3 and maincpu.pw@FF8590 LT 608 and param == 2">maincpu.pw@FF8590=606</action>
+    </script>
+  </cheat>
+  <cheat desc="SOMERSAULT JUSTICE"><comment>u/uf/ub all work.</comment>
+    <parameter>
+      <item value="0x1">u+K</item>
+      <item value="0x2">db,u+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x3 and maincpu.pw@FF8598 LT 608 and param == 1">maincpu.pw@FF8598=608</action>
+      <action condition="maincpu.pb@FF8502==0x3 and maincpu.pw@FF8598 LT 608 and param == 2">maincpu.pw@FF8598=606</action>
+    </script>
+  </cheat>
+  <cheat desc="SONIC BREAK">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">b,f+P</item>
+      <item value="0x3">f,b,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x3 and param == 1 and maincpu.pw@FF85A0 LT 608">maincpu.pw@FF85A0=608</action>
+      <action condition="maincpu.pb@FF8502==0x3 and param == 2 and maincpu.pw@FF85A0 LT 608">maincpu.pw@FF85A0=606</action>
+      <action condition="maincpu.pb@FF8502==0x3 and param == 3 and maincpu.pw@FF85A0 LT 606">maincpu.pw@FF85A0=604</action>
+    </script>
+  </cheat>
+  
+  <cheat desc=" "/>
+  <cheat desc="P1 Chun-Li easy special moves"/>
+  <cheat desc="HYAKURETSUKYAKU(LK)">
+    <parameter>
+      <item value="0x1">1 press</item>
+      <item value="0x2">2 press</item>
+      <item value="0x3">3 press</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8583 LT 4 and param == 1 and maincpu.pb@FF8502==0x4">maincpu.pw@FF8582=1004</action>
+      <action condition="maincpu.pb@FF8583 LT 3 and param == 2 and maincpu.pb@FF8502==0x4">maincpu.pw@FF8582=1003</action>
+      <action condition="maincpu.pb@FF8583 LT 2 and param == 3 and maincpu.pb@FF8502==0x4">maincpu.pw@FF8582=1002</action>
+    </script>
+  </cheat>
+  <cheat desc="HYAKURETSUKYAKU(MK)">
+    <parameter>
+      <item value="0x1">1 press</item>
+      <item value="0x2">2 press</item>
+      <item value="0x3">3 press</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8585 LT 4 and param == 1 and maincpu.pb@FF8502==0x4">maincpu.pw@FF8584=1004</action>
+      <action condition="maincpu.pb@FF8585 LT 3 and param == 2 and maincpu.pb@FF8502==0x4">maincpu.pw@FF8584=1003</action>
+      <action condition="maincpu.pb@FF8585 LT 2 and param == 3 and maincpu.pb@FF8502==0x4">maincpu.pw@FF8584=1002</action>
+    </script>
+  </cheat>
+  <cheat desc="HYAKURETSUKYAKU(HK)">
+    <parameter>
+      <item value="0x1">1 press</item>
+      <item value="0x2">2 press</item>
+      <item value="0x3">3 press</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8587 LT 4 and param == 1 and maincpu.pb@FF8502==0x4">maincpu.pw@FF8586=1004</action>
+      <action condition="maincpu.pb@FF8587 LT 3 and param == 2 and maincpu.pb@FF8502==0x4">maincpu.pw@FF8586=1003</action>
+      <action condition="maincpu.pb@FF8587 LT 2 and param == 3 and maincpu.pb@FF8502==0x4">maincpu.pw@FF8586=1002</action>
+    </script>
+  </cheat>
+  <cheat desc="KIKOKEN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x4">maincpu.pw@FF8588=0206</action>
+    </script>
+  </cheat>
+  <cheat desc="SO HAKKEI">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x4">maincpu.pw@FF8590=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="TENSHOKYAKU">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x4">maincpu.pw@FF8598=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="SEN'EN SHO">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x4">maincpu.pw@FF85A0=0208</action>
+    </script>
+  </cheat>
+  <cheat desc="SPINNING BIRD KICK(hack)">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x4">maincpu.od@3C40C=4E714E71</action>
+      <action condition="maincpu.pb@FF8502==0x4">maincpu.od@3C40C=4E714E71</action>
+      <action condition="maincpu.pb@FF8502==0x4 and maincpu.pb@FF8406==0xE and maincpu.pb@FF84AA==0x4">maincpu.pd@FF86B4=00176B00</action>
+    </script>
+  </cheat>
+  <cheat desc="SPINNING BIRD KICK">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x4">maincpu.pw@FF85A8=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="SENRETSU KYAKU">
+    <parameter>
+      <item value="0x1">f+K</item>
+      <item value="0x2">b,f+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85B0 LT 608 and param == 1 and maincpu.pb@FF8502==0x4">maincpu.pw@FF85B0=608</action>
+      <action condition="maincpu.pw@FF85B0 LT 608 and param == 2 and maincpu.pb@FF8502==0x4">maincpu.pw@FF85B0=606</action>
+    </script>
+  </cheat>
+  <cheat desc="HAZAN TENSHOKYAKU"><comment>u/uf/ub all work.</comment>
+    <parameter>
+      <item value="0x1">u+K</item>
+      <item value="0x2">db,u+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85B8 LT 608 and param == 1 and maincpu.pb@FF8502==0x4">maincpu.pw@FF85B8=608</action>
+      <action condition="maincpu.pw@FF85B8 LT 608 and param == 2 and maincpu.pb@FF8502==0x4">maincpu.pw@FF85B8=606</action>
+    </script>
+  </cheat>
+  <cheat desc="KIKOSHO">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">df,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85C0 LT 20A and param == 1 and maincpu.pb@FF8502==0x4">maincpu.pw@FF85C0=20A</action>
+      <action condition="maincpu.pw@FF85C0 LT 20A and param == 2 and maincpu.pb@FF8502==0x4">maincpu.pw@FF85C0=208</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Adon easy special moves"/>
+  <cheat desc="JAGUAR KICK">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x5">maincpu.pw@FF8580=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="RISING JAGUAR">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x5">maincpu.pw@FF8588=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="JAGUAR TOOTH">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x5">maincpu.pw@FF8590=0208</action>
+    </script>
+  </cheat>
+  <cheat desc="JAGUAR REVOLVER">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF8598 LT 208 and param == 1 and maincpu.pb@FF8502==0x5">maincpu.pw@FF8598=208</action>
+      <action condition="maincpu.pw@FF8598 LT 206 and param == 2 and maincpu.pb@FF8502==0x5">maincpu.pw@FF8598=206</action>
+    </script>
+  </cheat>
+  <cheat desc="JAGUAR VARIED ASSAULT">
+    <parameter>
+      <item value="0x1">df+P</item>
+      <item value="0x2">d,df+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85A0 LT 208 and param == 1 and maincpu.pb@FF8502==0x5">maincpu.pw@FF85A0=208</action>
+      <action condition="maincpu.pw@FF85A0 LT 208 and param == 2 and maincpu.pb@FF8502==0x5">maincpu.pw@FF85A0=206</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Sodom easy special moves"/>
+  <cheat desc="BUTSUMETSU BUSTER"><comment>b+P</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF840B == 01 and maincpu.pb@FF8502==0x6">maincpu.pd@FF8580=060200FF</action>
+      <action condition="maincpu.pb@FF840B == 00 and maincpu.pb@FF8502==0x6">maincpu.pd@FF8580=06020001</action>
+    </script>
+  </cheat>
+  <cheat desc="JIGOKU SCRAPE">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x6">maincpu.pw@FF8588=204</action>
+    </script>
+  </cheat>
+  <cheat desc="TENCHUSATSU">
+    <parameter>
+      <item value="0x1">b+P</item>
+      <item value="0x2">d,b+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF840B == 01 and param == 1 and maincpu.pb@FF8502==0x6">maincpu.pd@FF8590=060200FF</action>
+      <action condition="maincpu.pb@FF840B == 00 and param == 1 and maincpu.pb@FF8502==0x6">maincpu.pd@FF8590=06020001</action>
+      <action condition="maincpu.pb@FF840B == 01 and param == 2 and maincpu.pb@FF8592 GT 1 and maincpu.pb@FF8502==0x6">maincpu.pd@FF8590=040301FF</action>
+      <action condition="maincpu.pb@FF840B == 00 and param == 2 and maincpu.pb@FF8592 GT 1 and maincpu.pb@FF8502==0x6">maincpu.pd@FF8590=04010101</action>
+    </script>
+  </cheat>
+  <cheat desc="MEIDO NO MIYAGE">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">df,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x6 and maincpu.pw@FF8598 LT 20A and param == 1">maincpu.pw@FF8598=20A</action>
+      <action condition="maincpu.pb@FF8502==0x6 and maincpu.pw@FF8598 LT 20A and param == 2">maincpu.pw@FF8598=208</action>
+    </script>
+  </cheat>
+  <cheat desc="DAIKYO BURNING"><comment>b+K</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF840B == 01 and maincpu.pb@FF8502==0x6">maincpu.pd@FF85A0=060200FF</action>
+      <action condition="maincpu.pb@FF840B == 00 and maincpu.pb@FF8502==0x6">maincpu.pd@FF85A0=06020001</action>
+    </script>
+  </cheat>
+<!--   <cheat desc="KOTEN OKIAGARI">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x6">maincpu.pw@FF85A8=204</action>
+    </script>
+  </cheat> -->
+  <cheat desc="SHIRAHA CATCH">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x6">maincpu.pw@FF85B0=204</action>
+    </script>
+  </cheat>
+  <cheat desc="TENGU WALKING">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x6">maincpu.pw@FF85B8=204</action>
+    </script>
+  </cheat>
+  <cheat desc="YAGURA REVERSE">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x6">maincpu.pw@FF85C0=204</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Guy easy special moves"/>
+  <cheat desc="BUSHIN SENPUKYAKU">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x7">maincpu.pw@FF8580=204</action>
+    </script>
+  </cheat>
+  <cheat desc="BUSHIN HASSOKEN">
+    <parameter>
+      <item value="0x1">df+P</item>
+      <item value="0x2">d,df+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="param == 1 and maincpu.pw@FF8588 LT 208 and maincpu.pb@FF8502==0x7">maincpu.pw@FF8588=208</action>
+      <action condition="param == 2 and maincpu.pw@FF8588 LT 208 and maincpu.pb@FF8502==0x7">maincpu.pw@FF8588=206</action>
+    </script>
+  </cheat>
+  <cheat desc="BUSHIN GORAI KYAKU">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="param == 1 and maincpu.pw@FF8590 LT 208 and maincpu.pb@FF8502==0x7">maincpu.pw@FF8590=208</action>
+      <action condition="param == 2 and maincpu.pw@FF8590 LT 208 and maincpu.pb@FF8502==0x7">maincpu.pw@FF8590=206</action>
+    </script>
+  </cheat>
+  <cheat desc="BUSHIN IZUNA DROP">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x7">maincpu.pw@FF8598=204</action>
+    </script>
+  </cheat>
+  <cheat desc="HAYAGAKE">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x7">maincpu.pw@FF85A0=204</action>
+    </script>
+  </cheat>
+  <cheat desc="HOZANTO">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x7">maincpu.pw@FF85A8=204</action>
+    </script>
+  </cheat>
+  <cheat desc="BUSHIN MUSO RENGE">
+    <parameter>
+      <item value="0x1">b+P</item>
+      <item value="0x2">db,b+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="param == 1 and maincpu.pw@FF85B0 LT 210 and maincpu.pb@FF8502==0x7">maincpu.pw@FF85B0=210</action>
+      <action condition="param == 2 and maincpu.pw@FF85B0 LT 210 and maincpu.pb@FF8502==0x7">maincpu.pw@FF85B0=20E</action>
+    </script>
+  </cheat>
+  
+  <cheat desc=" "/>
+  <cheat desc="P1 Birdie easy special moves"/>
+  <cheat desc="BULL HEAD">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x8">maincpu.pw@FF8580=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="BULLHORN(LPMP)">
+    <parameter>
+      <item value="10">16F</item>
+      <item value="8">8F</item>
+      <item value="4">4F</item>
+      <item value="2">2F</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x8 and maincpu.pb@FF858C GT param">maincpu.pb@FF858C=param</action>
+    </script>
+  </cheat>
+  <cheat desc="BULLHORN(LPHP)">
+    <parameter>
+      <item value="10">16F</item>
+      <item value="8">8F</item>
+      <item value="4">4F</item>
+      <item value="2">2F</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x8 and maincpu.pb@FF8594 GT param">maincpu.pb@FF8594=param</action>
+    </script>
+  </cheat>
+  <cheat desc="BULLHORN(MPHP)">
+    <parameter>
+      <item value="10">16F</item>
+      <item value="8">8F</item>
+      <item value="4">4F</item>
+      <item value="2">2F</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x8 and maincpu.pb@FF859C GT param">maincpu.pb@FF859C=param</action>
+    </script>
+  </cheat>
+  <cheat desc="BULLHORN(ALLP)">
+    <parameter>
+      <item value="10">16F</item>
+      <item value="8">8F</item>
+      <item value="4">4F</item>
+      <item value="2">2F</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x8 and maincpu.pb@FF85A4 GT param">maincpu.pb@FF85A4=param</action>
+    </script>
+  </cheat>
+  <cheat desc="BULLHORN(LKMK)">
+    <parameter>
+      <item value="10">16F</item>
+      <item value="8">8F</item>
+      <item value="4">4F</item>
+      <item value="2">2F</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x8 and maincpu.pb@FF85AC GT param">maincpu.pb@FF85AC=param</action>
+    </script>
+  </cheat>
+  <cheat desc="BULLHORN(LKHK)">
+    <parameter>
+      <item value="10">16F</item>
+      <item value="8">8F</item>
+      <item value="4">4F</item>
+      <item value="2">2F</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x8 and maincpu.pb@FF85B4 GT param">maincpu.pb@FF85B4=param</action>
+    </script>
+  </cheat>
+  <cheat desc="BULLHORN(MKHK)">
+    <parameter>
+      <item value="10">16F</item>
+      <item value="8">8F</item>
+      <item value="4">4F</item>
+      <item value="2">2F</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x8 and maincpu.pb@FF85BC GT param">maincpu.pb@FF85BC=param</action>
+    </script>
+  </cheat>
+  <cheat desc="BULLHORN(ALLK)">
+    <parameter>
+      <item value="10">16F</item>
+      <item value="8">8F</item>
+      <item value="4">4F</item>
+      <item value="2">2F</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x8 and maincpu.pb@FF85C4 GT param">maincpu.pb@FF85C4=param</action>
+    </script>
+  </cheat>
+  <cheat desc="MURDERER CHAIN/BANDIT CHAIN"><comment>b+P/K</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF840B == 01 and maincpu.pb@FF8502==0x8">maincpu.pd@FF85C8=060200FF</action>
+      <action condition="maincpu.pb@FF840B == 00 and maincpu.pb@FF8502==0x8">maincpu.pd@FF85C8=06020001</action>
+    </script>
+  </cheat>
+  <cheat desc="BULL REVENGE">
+    <parameter>
+      <item value="0x1">df+P/K</item>
+      <item value="0x2">d,df+P/K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85D0 LT 208 and param == 1 and maincpu.pb@FF8502==0x8">maincpu.pw@FF85D0=208</action>
+      <action condition="maincpu.pw@FF85D0 LT 208 and param == 2 and maincpu.pb@FF8502==0x8">maincpu.pw@FF85D0=206</action>
+    </script>
+  </cheat>
+  <cheat desc="THE BIRDIE">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">b,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85D8 LT 608 and param == 1 and maincpu.pb@FF8502==0x8">maincpu.pw@FF85D8=608</action>
+      <action condition="maincpu.pw@FF85D8 LT 608 and param == 2 and maincpu.pb@FF8502==0x8">maincpu.pw@FF85D8=606</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Rose easy special moves"/>
+  <cheat desc="SOUL REFLECT">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x9">maincpu.pw@FF8580=204</action>
+    </script>
+  </cheat>
+  <cheat desc="SOUL SPARK">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x9">maincpu.pw@FF8588=208</action>
+    </script>
+  </cheat>
+  <cheat desc="SOUL THROW">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x9">maincpu.pw@FF8590=204</action>
+    </script>
+  </cheat>
+  <cheat desc="AURA SOUL THROW">
+    <parameter>
+      <item value="0x1">df+P</item>
+      <item value="0x2">d,df+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="param == 1 and maincpu.pw@FF8598 LT 208 and maincpu.pb@FF8502==0x9">maincpu.pw@FF8598=208</action>
+      <action condition="param == 2 and maincpu.pw@FF8598 LT 208 and maincpu.pb@FF8502==0x9">maincpu.pw@FF8598=206</action>
+    </script>
+  </cheat>
+  <cheat desc="AURA SOUL SPARK">
+    <parameter>
+      <item value="0x1">b+P</item>
+      <item value="0x2">db,b+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="param == 1 and maincpu.pw@FF85A0 LT 20A and maincpu.pb@FF8502==0x9">maincpu.pw@FF85A0=20A</action>
+      <action condition="param == 2 and maincpu.pw@FF85A0 LT 208 and maincpu.pb@FF8502==0x9">maincpu.pw@FF85A0=208</action>
+    </script>
+  </cheat>
+  <cheat desc="SOUL ILLUSION">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="param == 1 and maincpu.pw@FF85A8 LT 208 and maincpu.pb@FF8502==0x9">maincpu.pw@FF85A8=208</action>
+      <action condition="param == 2 and maincpu.pw@FF85A8 LT 208 and maincpu.pb@FF8502==0x9">maincpu.pw@FF85A8=206</action>
+    </script>
+  </cheat>
+  <cheat desc="SOUL SPIRAL">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x9">maincpu.pw@FF85B0=204</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 M.Bison(Dictator) easy special moves"/>
+  <cheat desc="PSYCHO CRUSHER(X)/SHOT">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xA">maincpu.pw@FF8580=402</action>
+    </script>
+  </cheat>
+  <cheat desc="HEAD PRESS">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xA">maincpu.pw@FF8588=402</action>
+    </script>
+  </cheat>
+  <cheat desc="DOUBLE KNEE PRESS">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xA">maincpu.pw@FF8590=402</action>
+    </script>
+  </cheat>
+  <cheat desc="WARP(hack)"><comment>X-ISM can perform</comment>
+    <script state="run">
+      <action>maincpu.od@47736=4E714E71</action>
+      <action>maincpu.od@4775C=4E714E71</action>
+    </script>
+  </cheat>
+  <cheat desc="WARP(FORWARD)">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xA">maincpu.pw@FF8598=204</action>
+    </script>
+  </cheat>
+  <cheat desc="WARP(BACKWARD)">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xA">maincpu.pw@FF85A0=204</action>
+    </script>
+  </cheat>
+  <cheat desc="PSYCHO CRUSHER(A)">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">b,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="param == 1 and maincpu.pw@FF85A8 LT 608 and maincpu.pb@FF8502==0xA">maincpu.pw@FF85A8=608</action>
+      <action condition="param == 2 and maincpu.pw@FF85A8 LT 608 and maincpu.pb@FF8502==0xA">maincpu.pw@FF85A8=606</action>
+    </script>
+  </cheat>
+  <cheat desc="KNEE PRESS NIGHTMARE">
+    <parameter>
+      <item value="0x1">f+K</item>
+      <item value="0x2">b,f+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="param == 1 and maincpu.pw@FF85B0 LT 608 and maincpu.pb@FF8502==0xA">maincpu.pw@FF85B0=608</action>
+      <action condition="param == 2 and maincpu.pw@FF85B0 LT 608 and maincpu.pb@FF8502==0xA">maincpu.pw@FF85B0=606</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Sagat easy special moves"/>
+  <cheat desc="TIGER SHOT">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xB">maincpu.pw@FF8580=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="GROUND TIGHER SHOT">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xB">maincpu.pw@FF8588=204</action>
+    </script>
+  </cheat>
+  <cheat desc="TIGER CRUSH"><comment>df+K(AVS) uf+K(X)</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xB and maincpu.pb@FF8523 NE FF">maincpu.pw@FF8590=204</action>
+      <action condition="maincpu.pb@FF8502==0xB and maincpu.pb@FF8523 == FF">maincpu.pw@FF8590=206</action>
+    </script>
+  </cheat>
+  <cheat desc="TIGER RAID">
+    <parameter>
+      <item value="0x1">db+K</item>
+      <item value="0x2">d,db+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xB and maincpu.pw@FF8598 LT 0x208 and param == 1">maincpu.pw@FF8598=208</action>
+      <action condition="maincpu.pb@FF8502==0xB and maincpu.pw@FF8598 LT 0x206 and param == 2">maincpu.pw@FF8598=206</action>
+    </script>
+  </cheat>
+  <cheat desc="TIGER BLOW/UPPERCUT">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xB">maincpu.pw@FF85A0=204</action>
+    </script>
+  </cheat>
+  <cheat desc="TIGER GENOCIDE">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xB and maincpu.pw@FF85A8 LT 208 and param == 1">maincpu.pw@FF85A8=208</action>
+      <action condition="maincpu.pb@FF8502==0xB and maincpu.pw@FF85A8 LT 208 and param == 2">maincpu.pw@FF85A8=206</action>
+    </script>
+  </cheat>
+  <cheat desc="TIGER CANNON">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">df,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xB and maincpu.pw@FF85B0 LT 20A and param == 1">maincpu.pw@FF85B0=20A</action>
+      <action condition="maincpu.pb@FF8502==0xB and maincpu.pw@FF85B0 LT 208 and param == 2">maincpu.pw@FF85B0=208</action>
+    </script>
+  </cheat>
+  <cheat desc="ANGRY CHARGE"><comment>QCF+START => F+START</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xB">maincpu.pw@FF85B8=204</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Dan easy special moves"/>
+  <cheat desc="GADOKEN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xC">maincpu.pw@FF8580=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="KORYUKEN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xC">maincpu.pw@FF8588=204</action>
+    </script>
+  </cheat>
+  <cheat desc="DANKUKYAKU">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xC">maincpu.pw@FF8590=204</action>
+    </script>
+  </cheat>
+  <cheat desc="SHINKU GADOKEN">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">df,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xC and maincpu.pw@FF8598 LT 20A and param == 1">maincpu.pw@FF8598=20A</action>
+      <action condition="maincpu.pb@FF8502==0xC and maincpu.pw@FF8598 LT 208 and param == 2">maincpu.pw@FF8598=208</action>
+    </script>
+  </cheat>
+  <cheat desc="KORYU REKKA">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xC and param == 1 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=208</action>
+      <action condition="maincpu.pb@FF8502==0xC and param == 2 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=206</action>
+    </script>
+  </cheat>
+  <cheat desc="HISSHO BURAIKEN">
+    <parameter>
+      <item value="0x1">db+K</item>
+      <item value="0x2">d,db+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xC and param == 1 and maincpu.pw@FF85A8 LT 208">maincpu.pw@FF85A8=208</action>
+      <action condition="maincpu.pb@FF8502==0xC and param == 2 and maincpu.pw@FF85A8 LT 208">maincpu.pw@FF85A8=206</action>
+    </script>
+  </cheat>
+  <cheat desc="ROLLING TAUNT(FORWARD)">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xC">maincpu.pw@FF85B0=204</action>
+    </script>
+  </cheat>
+  <cheat desc="ROLLING TAUNT(BACK)">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xC">maincpu.pw@FF85B8=204</action>
+    </script>
+  </cheat>
+  <cheat desc="LEGENDARY TAUNT">
+    <parameter>
+      <item value="0x1">f+START</item>
+      <item value="0x2">df,f+START</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xC and param == 1 and maincpu.pw@FF85C0 LT 20A">maincpu.pw@FF85C0=20A</action>
+      <action condition="maincpu.pb@FF8502==0xC and param == 2 and maincpu.pw@FF85C0 LT 208">maincpu.pw@FF85C0=208</action>
+    </script>
+  </cheat>
+  <cheat desc="MYTHICAL TAUNT">
+    <parameter>
+      <item value="0x1">b+START</item>
+      <item value="0x2">db,b+START</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xC and param == 1 and maincpu.pw@FF85C8 LT 20A">maincpu.pw@FF85C8=20A</action>
+      <action condition="maincpu.pb@FF8502==0xC and param == 2 and maincpu.pw@FF85C8 LT 208">maincpu.pw@FF85C8=208</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Sakura easy special moves"/>
+  <cheat desc="HADOKEN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xD">maincpu.pw@FF8580=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="SHO'OKEN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xD">maincpu.pw@FF8588=204</action>
+    </script>
+  </cheat>
+  <cheat desc="SHUNPUKYAKU">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xD">maincpu.pw@FF8590=204</action>
+    </script>
+  </cheat>
+  <cheat desc="SHINKU HADOKEN">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">df,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xD and maincpu.pw@FF8598 LT 20A and param == 1">maincpu.pw@FF8598=20A</action>
+      <action condition="maincpu.pb@FF8502==0xD and maincpu.pw@FF8598 LT 208 and param == 2">maincpu.pw@FF8598=208</action>
+    </script>
+  </cheat>
+  <cheat desc="MIDARE ZAKURA">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xD and param == 1 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=208</action>
+      <action condition="maincpu.pb@FF8502==0xD and param == 2 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=206</action>
+    </script>
+  </cheat>
+  <cheat desc="HARU ICHIBAN">
+    <parameter>
+      <item value="0x1">db+K</item>
+      <item value="0x2">d,db+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xD and param == 1 and maincpu.pw@FF85A8 LT 208">maincpu.pw@FF85A8=208</action>
+      <action condition="maincpu.pb@FF8502==0xD and param == 2 and maincpu.pw@FF85A8 LT 208">maincpu.pw@FF85A8=206</action>
+    </script>
+  </cheat>
+  <cheat desc="SAKURA OTOSHI(hack)"><comment>X-ism can perform</comment>
+    <script state="run">
+      <action>maincpu.od@4D99A=4E714E71</action>
+      <action>maincpu.od@4D99A=4E714E71</action>
+    </script>
+  </cheat>
+  <cheat desc="SAKURA OTOSHI">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xD">maincpu.pw@FF85B0=204</action>
+    </script>
+  </cheat>
+  
+  <cheat desc=" "/>
+  <cheat desc="P1 Rolento easy special moves"/>
+  <cheat desc="STINGER">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xE">maincpu.pw@FF8580=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="MEKONG DELTA ESCAPE">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xE">maincpu.pw@FF8588=204</action>
+    </script>
+  </cheat>
+  <cheat desc="HIGH JUMP">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xE">maincpu.pw@FF8590=202</action>
+    </script>
+  </cheat>
+  <cheat desc="STEEL RAIN">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xE and maincpu.pw@FF8598 LT 208 and param == 1">maincpu.pw@FF8598=208</action>
+      <action condition="maincpu.pb@FF8502==0xE and maincpu.pw@FF8598 LT 206 and param == 2">maincpu.pw@FF8598=206</action>
+    </script>
+  </cheat>
+  <cheat desc="MINE SWEEPER">
+    <parameter>
+      <item value="0x1">b+P</item>
+      <item value="0x2">db,b+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xE and maincpu.pw@FF85A0 LT 20A and param == 1">maincpu.pw@FF85A0=20A</action>
+      <action condition="maincpu.pb@FF8502==0xE and maincpu.pw@FF85A0 LT 208 and param == 2">maincpu.pw@FF85A0=208</action>
+    </script>
+  </cheat>
+  <cheat desc="TAKE NO PRISONER">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">df,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xE and maincpu.pw@FF85A8 LT 20A and param == 1">maincpu.pw@FF85A8=20A</action>
+      <action condition="maincpu.pb@FF8502==0xE and maincpu.pw@FF85A8 LT 208 and param == 2">maincpu.pw@FF85A8=208</action>
+    </script>
+  </cheat>
+  <cheat desc="PATRIOT CIRCLE">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xE">maincpu.pw@FF85B0=204</action>
+      <action condition="maincpu.pb@FF8502==0xE">maincpu.pw@FF85C0=204</action>
+    </script>
+  </cheat>
+  <cheat desc="MEKONG DELTA AIR RAID">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xE">maincpu.pw@FF85B8=204</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Dhalsim easy special moves"/>
+  <cheat desc="YOGA TELEPORT(FORWARD)">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xF">maincpu.pw@FF8580=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="YOGA TELEPORT(BACK)">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xF">maincpu.pw@FF8588=204</action>
+    </script>
+  </cheat>
+  <cheat desc="YOGA FIRE">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xF">maincpu.pw@FF8590=204</action>
+    </script>
+  </cheat>
+  <cheat desc="YOGA FLAME"><comment>conflict with YOGA FIRE on X-ism</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xF and maincpu.pb@FF8523 NE FF">maincpu.pw@FF8598=208</action>
+      <action condition="maincpu.pb@FF8502==0xF and maincpu.pb@FF8523 == FF">maincpu.pw@FF85D0=208</action>
+    </script>
+  </cheat>
+  <cheat desc="YOGA BLAST">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xF and maincpu.pb@FF8523 NE FF">maincpu.pw@FF85A0=208</action>
+      <action condition="maincpu.pb@FF8502==0xF and maincpu.pb@FF8523 == FF">maincpu.pw@FF85D8=208</action>
+    </script>
+  </cheat>
+  <cheat desc="YOGA ESCAPE">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xF">maincpu.pw@FF85A8=204</action>
+    </script>
+  </cheat>
+  <cheat desc="YOGA INFERNO">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">df,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xF and param == 1 and maincpu.pw@FF85B0 LT 20A">maincpu.pw@FF85B0=20A</action>
+      <action condition="maincpu.pb@FF8502==0xF and param == 2 and maincpu.pw@FF85B0 LT 208">maincpu.pw@FF85B0=208</action>
+    </script>
+  </cheat>
+  <cheat desc="YOGA STRIKE">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,bf+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xF and param == 1 and maincpu.pw@FF85B8 LT 208">maincpu.pw@FF85B8=208</action>
+      <action condition="maincpu.pb@FF8502==0xF and param == 2 and maincpu.pw@FF85B8 LT 206">maincpu.pw@FF85B8=206</action>
+    </script>
+  </cheat>
+  <cheat desc="YOGA TEMPEST">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">df,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xF and param == 1 and maincpu.pw@FF85C0 LT 210">maincpu.pw@FF85C0=210</action>
+      <action condition="maincpu.pb@FF8502==0xF and param == 2 and maincpu.pw@FF85C0 LT 210">maincpu.pw@FF85C0=20E</action>
+    </script>
+  </cheat>
+  <cheat desc="YOGA STREAM">
+    <parameter>
+      <item value="0x1">b+P</item>
+      <item value="0x2">db,b+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0xF and param == 1 and maincpu.pw@FF85C8 LT 20A">maincpu.pw@FF85C8=20A</action>
+      <action condition="maincpu.pb@FF8502==0xF and param == 2 and maincpu.pw@FF85C8 LT 208">maincpu.pw@FF85C8=208</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Zangief easy special moves"/>
+  <cheat desc="BANISHING FLAT"><comment>d+P(X) df+P(AVS)</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x10">maincpu.pw@FF8580=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="ATOMIC SUPLEX"><comment>b+K</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF840B == 01 and maincpu.pb@FF8502==0x10">maincpu.pd@FF8588=060200FF</action>
+      <action condition="maincpu.pb@FF840B == 00 and maincpu.pb@FF8502==0x10">maincpu.pd@FF8588=06020001</action>
+    </script>
+  </cheat>
+  <cheat desc="SPINNING PILEDRIVE"><comment>b+P</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF840B == 01 and maincpu.pb@FF8502==0x10">maincpu.pd@FF8590=060200FF</action>
+      <action condition="maincpu.pb@FF840B == 00 and maincpu.pb@FF8502==0x10">maincpu.pd@FF8590=06020001</action>
+    </script>
+  </cheat>
+  <cheat desc="FINAL ATOMIC BUSTER">
+    <parameter>
+      <item value="0x1">b+P</item>
+      <item value="0x2">d,b+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF840B == 01 and param == 1 and maincpu.pb@FF8502==0x10">maincpu.pd@FF8598=060200FF</action>
+      <action condition="maincpu.pb@FF840B == 00 and param == 1 and maincpu.pb@FF8502==0x10">maincpu.pd@FF8598=06020001</action>
+      <action condition="maincpu.pb@FF840B == 01 and param == 2 and maincpu.pb@FF859A GT 1 and maincpu.pb@FF8502==0x10">maincpu.pd@FF8598=040301FF</action>
+      <action condition="maincpu.pb@FF840B == 00 and param == 2 and maincpu.pb@FF859A GT 1 and maincpu.pb@FF8502==0x10">maincpu.pd@FF8598=04010101</action>
+    </script>
+  </cheat>
+  <cheat desc="AERIAL RUSSIAN SLAM">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x10 and param ==1 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=208</action>
+      <action condition="maincpu.pb@FF8502==0x10 and param ==2 and maincpu.pw@FF85A0 LT 206">maincpu.pw@FF85A0=206</action>
+    </script>
+  </cheat>
+  
+  <cheat desc=" "/>
+  <cheat desc="P1 Gen easy special moves"/>
+  <cheat desc="HYAKURENKO(LP)">
+    <parameter>
+      <item value="0x1">1 press</item>
+      <item value="0x2">2 press</item>
+      <item value="0x3">3 press</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8583 LT 4 and param == 1 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF8582=1004</action>
+      <action condition="maincpu.pb@FF8583 LT 3 and param == 2 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF8582=1003</action>
+      <action condition="maincpu.pb@FF8583 LT 2 and param == 3 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF8582=1002</action>
+    </script>
+  </cheat>
+  <cheat desc="HYAKURENKO(MP)">
+    <parameter>
+      <item value="0x1">1 press</item>
+      <item value="0x2">2 press</item>
+      <item value="0x3">3 press</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8585 LT 4 and param == 1 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF8584=1004</action>
+      <action condition="maincpu.pb@FF8585 LT 3 and param == 2 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF8584=1003</action>
+      <action condition="maincpu.pb@FF8585 LT 2 and param == 3 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF8584=1002</action>
+    </script>
+  </cheat>
+  <cheat desc="HYAKURENKO(HP)">
+    <parameter>
+      <item value="0x1">1 press</item>
+      <item value="0x2">2 press</item>
+      <item value="0x3">3 press</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8587 LT 4 and param == 1 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF8586=1004</action>
+      <action condition="maincpu.pb@FF8587 LT 3 and param == 2 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF8586=1003</action>
+      <action condition="maincpu.pb@FF8587 LT 2 and param == 3 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF8586=1002</action>
+    </script>
+  </cheat>
+  <cheat desc="GEKIRO">
+    <script state="run">
+      <action condition="(maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF8588=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="JASEN">
+    <script state="run">
+      <action condition="(maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF8590=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="OGA">
+    <script state="run">
+      <action condition="(maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF8598=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="SHITENSHU">
+    <parameter>
+      <item value="0x1">db+P</item>
+      <item value="0x2">d,db+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85A0 LT 208 and param ==1 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF85A0=208</action>
+      <action condition="maincpu.pw@FF85A0 LT 208 and param ==2 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF85A0=206</action>
+    </script>
+  </cheat>
+  <cheat desc="ZAN'EI">
+    <parameter>
+      <item value="0x1">df+P</item>
+      <item value="0x2">d,df+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85A8 LT 208 and param ==1 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF85A8=208</action>
+      <action condition="maincpu.pw@FF85A8 LT 208 and param ==2 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF85A8=206</action>
+    </script>
+  </cheat>
+  <cheat desc="JAKOHA">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85B0 LT 208 and param ==1 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF85B0=208</action>
+      <action condition="maincpu.pw@FF85B0 LT 208 and param ==2 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF85B0=206</action>
+    </script>
+  </cheat>
+  <cheat desc="KOGA">
+    <parameter>
+      <item value="0x1">db+K</item>
+      <item value="0x2">d,db+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85B8 LT 208 and param ==1 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF85B8=208</action>
+      <action condition="maincpu.pw@FF85B8 LT 206 and param ==2 and (maincpu.pb@FF8502==0x11 or maincpu.pb@FF8502==0x13)">maincpu.pw@FF85B8=206</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Balrog(Boxer) easy special moves"/>
+  <cheat desc="DASH STRAIGHT">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x15">maincpu.pw@FF8580=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="DASH UPPER">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x15">maincpu.pw@FF8588=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="DASH GROUND STRAIGHT">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x15">maincpu.pw@FF8590=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="DASH GROUND UPPER">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x15">maincpu.pw@FF8598=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="BUFFALO HEADBUTT"><comment>no working on A-ism(reversal)</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x15">maincpu.pw@FF85A0=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="TURN PUNCH(ALLP)">
+    <parameter>
+      <item value="10">16F</item>
+      <item value="8">8F</item>
+      <item value="4">4F</item>
+      <item value="2">2F</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x15 and maincpu.pb@FF85AC GT param">maincpu.pb@FF85AC=param</action>
+    </script>
+  </cheat>
+  <cheat desc="TURN PUNCH(ALLK)">
+    <parameter>
+      <item value="10">16F</item>
+      <item value="8">8F</item>
+      <item value="4">4F</item>
+      <item value="2">2F</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x15 and maincpu.pb@FF85B4 GT param">maincpu.pb@FF85B4=param</action>
+    </script>
+  </cheat>
+  <cheat desc="CRAZY BUFFALO">
+    <parameter>
+      <item value="0x1">f+P/K(X)</item>
+      <item value="0x2">b,f+P/K(X)</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85B8 LT 608 and param ==1 and maincpu.pb@FF8502==0x15 and maincpu.pb@FF8523 == FF">maincpu.pw@FF85B8=608</action>
+      <action condition="maincpu.pw@FF85B8 LT 608 and param ==2 and maincpu.pb@FF8502==0x15 and maincpu.pb@FF8523 == FF">maincpu.pw@FF85B8=606</action>
+      <action condition="maincpu.pw@FF85C8 LT 608 and param ==1 and maincpu.pb@FF8502==0x15 and maincpu.pb@FF8523 NE FF">maincpu.pw@FF85C8=608</action>
+      <action condition="maincpu.pw@FF85C8 LT 608 and param ==2 and maincpu.pb@FF8502==0x15 and maincpu.pb@FF8523 NE FF">maincpu.pw@FF85C8=606</action>
+    </script>
+  </cheat>
+  <cheat desc="GIGATON BLOW">
+    <parameter>
+      <item value="0x1">f+K</item>
+      <item value="0x2">b,f+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85C0 LT 608 and param ==1 and maincpu.pb@FF8502==0x15">maincpu.pw@FF85C0=608</action>
+      <action condition="maincpu.pw@FF85C0 LT 608 and param ==2 and maincpu.pb@FF8502==0x15">maincpu.pw@FF85C0=606</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Cammy easy special moves"/>
+  <cheat desc="CANNON SPIKE">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.pw@FF8580=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="SPIRAL ARROW">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.pw@FF8588=204</action>
+    </script>
+  </cheat>
+  <cheat desc="AXEL SPIN KNUCKLE">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.pw@FF8590=208</action>
+    </script>
+  </cheat>
+  <cheat desc="HOOLIGAN COMBINATION">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.pw@FF8598=206</action>
+    </script>
+  </cheat>
+  <cheat desc="SPIN DRIVE SMASHER">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x16 and param ==1 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=208</action>
+      <action condition="maincpu.pb@FF8502==0x16 and param ==2 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=206</action>
+    </script>
+  </cheat>
+  <cheat desc="CANNON STRIKE(hack)"><comment>any fighting style, any pose, any height</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.od@5B158=4E714E71</action>
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.od@5B158=4E714E71</action>
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.od@5B160=4E714E71</action>
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.od@5B160=4E714E71</action>
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.od@5B168=4E714E71</action>
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.od@5B168=4E714E71</action>
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.od@5B17E=4E714E71</action>
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.od@5B17E=4E714E71</action>
+    </script>
+  </cheat>
+  <cheat desc="CANNON STRIKE">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.pw@FF85A8=204</action>
+    </script>
+  </cheat>
+  <cheat desc="REVERSE SHAFT BREAKER">
+    <parameter>
+      <item value="0x1">db+K</item>
+      <item value="0x2">d,db+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x16 and param ==1 and maincpu.pw@FF85B0 LT 208">maincpu.pw@FF85B0=208</action>
+      <action condition="maincpu.pb@FF8502==0x16 and param ==2 and maincpu.pw@FF85B0 LT 208">maincpu.pw@FF85B0=206</action>
+    </script>
+  </cheat>
+  <cheat desc="KILLER BEE ASSAULT"><comment>u/ub/uf+K</comment>
+    <parameter>
+      <item value="0x1">u+K</item>
+      <item value="0x2">db,u+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x16 and param ==1 and maincpu.pw@FF85B8 LT 608">maincpu.pw@FF85B8=608</action>
+      <action condition="maincpu.pb@FF8502==0x16 and param ==2 and maincpu.pw@FF85B8 LT 600">maincpu.pw@FF85B8=606</action>
+    </script>
+  </cheat>
+  <cheat desc="CANNON REVENGE">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x16">maincpu.pw@FF85C0=204</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 E.Honda easy special moves"/>
+  <cheat desc="SUMO HEADBUTT">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x18">maincpu.pw@FF8580=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="SUMO SMASH">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x18">maincpu.pw@FF8588=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="HUNDRED HAND SLAP(LP)">
+    <parameter>
+      <item value="0x1">1 press</item>
+      <item value="0x2">2 press</item>
+      <item value="0x3">3 press</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8593 LT 4 and param == 1 and maincpu.pb@FF8502==0x18">maincpu.pw@FF8592=1004</action>
+      <action condition="maincpu.pb@FF8593 LT 3 and param == 2 and maincpu.pb@FF8502==0x18">maincpu.pw@FF8592=1003</action>
+      <action condition="maincpu.pb@FF8593 LT 2 and param == 3 and maincpu.pb@FF8502==0x18">maincpu.pw@FF8592=1002</action>
+    </script>
+  </cheat>
+  <cheat desc="HUNDRED HAND SLAP(MP)">
+    <parameter>
+      <item value="0x1">1 press</item>
+      <item value="0x2">2 press</item>
+      <item value="0x3">3 press</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8595 LT 4 and param == 1 and maincpu.pb@FF8502==0x18">maincpu.pw@FF8594=1004</action>
+      <action condition="maincpu.pb@FF8595 LT 3 and param == 2 and maincpu.pb@FF8502==0x18">maincpu.pw@FF8594=1003</action>
+      <action condition="maincpu.pb@FF8595 LT 2 and param == 3 and maincpu.pb@FF8502==0x18">maincpu.pw@FF8594=1002</action>
+    </script>
+  </cheat>
+  <cheat desc="HUNDRED HAND SLAP(HP)">
+    <parameter>
+      <item value="0x1">1 press</item>
+      <item value="0x2">2 press</item>
+      <item value="0x3">3 press</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8597 LT 4 and param == 1 and maincpu.pb@FF8502==0x18">maincpu.pw@FF8596=1004</action>
+      <action condition="maincpu.pb@FF8597 LT 3 and param == 2 and maincpu.pb@FF8502==0x18">maincpu.pw@FF8596=1003</action>
+      <action condition="maincpu.pb@FF8597 LT 2 and param == 3 and maincpu.pb@FF8502==0x18">maincpu.pw@FF8596=1002</action>
+    </script>
+  </cheat>
+  <cheat desc="ONI MUSO">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">b,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF8598 LT 0608 and param == 1 and maincpu.pb@FF8502==0x18">maincpu.pw@FF8598=0608</action>
+      <action condition="maincpu.pw@FF8598 LT 0608 and param == 2 and maincpu.pb@FF8502==0x18">maincpu.pw@FF8598=0606</action>
+    </script>
+  </cheat>
+  <cheat desc="OISHO THROW"><comment>b+P</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF840B == 01 and maincpu.pb@FF8502==0x18">maincpu.pd@FF85A0=060200FF</action>
+      <action condition="maincpu.pb@FF840B == 00 and maincpu.pb@FF8502==0x18">maincpu.pd@FF85A0=06020001</action>
+    </script>
+  </cheat>
+  <cheat desc="FUJI DROP">
+    <parameter>
+      <item value="0x1">f+K</item>
+      <item value="0x2">b,f+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85A8 LT 608 and param ==1 and maincpu.pb@FF8502==0x18">maincpu.pw@FF85A8=608</action>
+      <action condition="maincpu.pw@FF85A8 LT 608 and param ==2 and maincpu.pb@FF8502==0x18">maincpu.pw@FF85A8=606</action>
+    </script>
+  </cheat>
+  <cheat desc="OROCHI CRUSH">
+    <parameter>
+      <item value="0x1">b+P</item>
+      <item value="0x2">d,b+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF840B == 01 and param == 1 and maincpu.pb@FF8502==0x18">maincpu.pd@FF85B8=060200FF</action>
+      <action condition="maincpu.pb@FF840B == 00 and param == 1 and maincpu.pb@FF8502==0x18">maincpu.pd@FF85B8=06020001</action>
+      <action condition="maincpu.pb@FF840B == 01 and param == 2 and maincpu.pb@FF85BA GT 1 and maincpu.pb@FF8502==0x18">maincpu.pd@FF85B8=040301FF</action>
+      <action condition="maincpu.pb@FF840B == 00 and param == 2 and maincpu.pb@FF85BA GT 1 and maincpu.pb@FF8502==0x18">maincpu.pd@FF85B8=04010101</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Blanka easy special moves"/>
+  <cheat desc="ROLLING ATTACK">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x19">maincpu.pw@FF8580=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="ELECTRIC THUNDER(LP)">
+    <parameter>
+      <item value="0x1">1 press</item>
+      <item value="0x2">2 press</item>
+      <item value="0x3">3 press</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF858B LT 4 and param == 1 and maincpu.pb@FF8502==0x19">maincpu.pw@FF858A=1004</action>
+      <action condition="maincpu.pb@FF858B LT 3 and param == 2 and maincpu.pb@FF8502==0x19">maincpu.pw@FF858A=1003</action>
+      <action condition="maincpu.pb@FF858B LT 2 and param == 3 and maincpu.pb@FF8502==0x19">maincpu.pw@FF858A=1002</action>
+    </script>
+  </cheat>
+  <cheat desc="ELECTRIC THUNDER(MP)">
+    <parameter>
+      <item value="0x1">1 press</item>
+      <item value="0x2">2 press</item>
+      <item value="0x3">3 press</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF858D LT 4 and param == 1 and maincpu.pb@FF8502==0x19">maincpu.pw@FF858C=1004</action>
+      <action condition="maincpu.pb@FF858D LT 3 and param == 2 and maincpu.pb@FF8502==0x19">maincpu.pw@FF858C=1003</action>
+      <action condition="maincpu.pb@FF858D LT 2 and param == 3 and maincpu.pb@FF8502==0x19">maincpu.pw@FF858C=1002</action>
+    </script>
+  </cheat>
+  <cheat desc="ELECTRIC THUNDER(HP)">
+    <parameter>
+      <item value="0x1">1 press</item>
+      <item value="0x2">2 press</item>
+      <item value="0x3">3 press</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF858F LT 4 and param == 1 and maincpu.pb@FF8502==0x19">maincpu.pw@FF858E=1004</action>
+      <action condition="maincpu.pb@FF858F LT 3 and param == 2 and maincpu.pb@FF8502==0x19">maincpu.pw@FF858E=1003</action>
+      <action condition="maincpu.pb@FF858F LT 2 and param == 3 and maincpu.pb@FF8502==0x19">maincpu.pw@FF858E=1002</action>
+    </script>
+  </cheat>
+  <cheat desc="BACKSTEP ROLL">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x19">maincpu.pw@FF8590=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="VERTICAL ROLL">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x19">maincpu.pw@FF8598=0402</action>
+    </script>
+  </cheat>
+  <cheat desc="TROPICAL HAZARD"><comment>u/ub/uf+K</comment>
+    <parameter>
+      <item value="0x1">u+K</item>
+      <item value="0x2">db,u+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85A0 LT 608 and param ==1 and maincpu.pb@FF8502==0x19">maincpu.pw@FF85A0=608</action>
+      <action condition="maincpu.pw@FF85A0 LT 608 and param ==2 and maincpu.pb@FF8502==0x19">maincpu.pw@FF85A0=606</action>
+    </script>
+  </cheat>
+  <cheat desc="GROUND SHAVE ROLL">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">b,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pw@FF85A8 LT 608 and param ==1 and maincpu.pb@FF8502==0x19">maincpu.pw@FF85A8=608</action>
+      <action condition="maincpu.pw@FF85A8 LT 608 and param ==2 and maincpu.pb@FF8502==0x19">maincpu.pw@FF85A8=606</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 R.Mika easy special moves"/>
+  <cheat desc="SARDINE'S BEACH SPECIAL">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1A and param ==1 and maincpu.pw@FF8580 LT 208">maincpu.pw@FF8580=208</action>
+      <action condition="maincpu.pb@FF8502==0x1A and param ==2 and maincpu.pw@FF8580 LT 208">maincpu.pw@FF8580=206</action>
+    </script>
+  </cheat>
+  <cheat desc="FLYING PEACH">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1A">maincpu.pw@FF8588=204</action>
+    </script>
+  </cheat>
+  <cheat desc="DAYDREAM HEADLOCK"><comment>f+K</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF840B == 01 and maincpu.pb@FF8502==0x1A">maincpu.pd@FF8590=06020001</action>
+      <action condition="maincpu.pb@FF840B == 00 and maincpu.pb@FF8502==0x1A">maincpu.pd@FF8590=060200FF</action>
+    </script>
+  </cheat>
+  <cheat desc="WINGLESS AIRPLANE">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1A">maincpu.pw@FF8598=208</action>
+    </script>
+  </cheat>
+  <cheat desc="SHOOTING PEACH">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1A">maincpu.pw@FF85A0=204</action>
+    </script>
+  </cheat>
+  <cheat desc="PARADISE HOLD"><comment>f+P</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF840B == 01 and maincpu.pb@FF8502==0x1A">maincpu.pd@FF85A8=06020001</action>
+      <action condition="maincpu.pb@FF840B == 00 and maincpu.pb@FF8502==0x1A">maincpu.pd@FF85A8=060200FF</action>
+    </script>
+  </cheat>
+  <cheat desc="RAINBOW HIP RUSH">
+    <parameter>
+      <item value="0x1">df+P</item>
+      <item value="0x2">d,df+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1A and param ==1 and maincpu.pw@FF85B0 LT 208">maincpu.pw@FF85B0=208</action>
+      <action condition="maincpu.pb@FF8502==0x1A and param ==2 and maincpu.pw@FF85B0 LT 208">maincpu.pw@FF85B0=206</action>
+    </script>
+  </cheat>
+  <cheat desc="HEAVENLY DYNAMITE">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">d,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF840B == 01 and param == 1 and maincpu.pb@FF8502==0x1A">maincpu.pd@FF85B8=06020001</action>
+      <action condition="maincpu.pb@FF840B == 00 and param == 1 and maincpu.pb@FF8502==0x1A">maincpu.pd@FF85B8=060200FF</action>
+      <action condition="maincpu.pb@FF840B == 01 and param == 2 and maincpu.pb@FF85BA GT 1 and maincpu.pb@FF8502==0x1A">maincpu.pd@FF85B8=04010101</action>
+      <action condition="maincpu.pb@FF840B == 00 and param == 2 and maincpu.pb@FF85BA GT 1 and maincpu.pb@FF8502==0x1A">maincpu.pd@FF85B8=040301FF</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Cody easy special moves"/>
+  <cheat desc="CRIMINAL UPPER">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1B">maincpu.pw@FF8580=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="BAD SPRAY">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1B">maincpu.pw@FF8588=204</action>
+    </script>
+  </cheat>
+  <cheat desc="RUFFIAN KICK">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1B">maincpu.pw@FF8590=204</action>
+    </script>
+  </cheat>
+  <cheat desc="BAD STONE">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1B">maincpu.pw@FF8598=204</action>
+    </script>
+  </cheat>
+  <cheat desc="FINAL DESTRUCTION">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">df,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1B and param ==1 and maincpu.pw@FF85A0 LT 20A">maincpu.pw@FF85A0=20A</action>
+      <action condition="maincpu.pb@FF8502==0x1B and param ==2 and maincpu.pw@FF85A0 LT 208">maincpu.pw@FF85A0=208</action>
+    </script>
+  </cheat>
+  <cheat desc="DEAD END IRONY">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1B and param ==1 and maincpu.pw@FF85A8 LT 208">maincpu.pw@FF85A8=208</action>
+      <action condition="maincpu.pb@FF8502==0x1B and param ==2 and maincpu.pw@FF85A8 LT 208">maincpu.pw@FF85A8=206</action>
+    </script>
+  </cheat>
+  <cheat desc="FAKE THROW"><comment>QCF+START => f+START</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1B">maincpu.pw@FF85B0=204</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Vega(Claw) easy special moves"/>
+  <cheat desc="ROLLING CRYSTAL FLASH">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1C">maincpu.pw@FF8580=402</action>
+    </script>
+  </cheat>
+  <cheat desc="FLYING">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1C">maincpu.pw@FF8588=402</action>
+    </script>
+  </cheat>
+  <cheat desc="SKY HIGH CLAW">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1C">maincpu.pw@FF8590=402</action>
+    </script>
+  </cheat>
+  <cheat desc="FLYING SUPER"><comment>u/uf/ub+K</comment>
+    <parameter>
+      <item value="0x1">u+K</item>
+      <item value="0x2">db,u+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="param ==1 and maincpu.pw@FF8598 LT 608 and maincpu.pb@FF8502==0x1C">maincpu.pw@FF8598=608</action>
+      <action condition="param ==2 and maincpu.pw@FF8598 LT 608 and maincpu.pb@FF8502==0x1C">maincpu.pw@FF8598=606</action>
+    </script>
+  </cheat>
+  <cheat desc="SCARLET TERROR(hack)"><comment>any ISM can perform.</comment>
+    <script state="run">
+      <action>maincpu.od@67DCE=4E714E71</action>
+      <action>maincpu.od@67DCE=4E714E71</action>
+    </script>
+  </cheat>
+  <cheat desc="SCARLET TERROR">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1C">maincpu.pw@FF85A0=402</action>
+    </script>
+  </cheat>
+  <cheat desc="SCARLET MIRAGE">
+    <parameter>
+      <item value="0x1">f+K</item>
+      <item value="0x2">b,f+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="param ==1 and maincpu.pw@FF85A8 LT 608 and maincpu.pb@FF8502==0x1C">maincpu.pw@FF85A8=608</action>
+      <action condition="param ==2 and maincpu.pw@FF85A8 LT 608 and maincpu.pb@FF8502==0x1C">maincpu.pw@FF85A8=606</action>
+    </script>
+  </cheat>
+  <cheat desc="RED IMPACT">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">b,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="param ==1 and maincpu.pw@FF85B0 LT 608 and maincpu.pb@FF8502==0x1C">maincpu.pw@FF85B0=608</action>
+      <action condition="param ==2 and maincpu.pw@FF85B0 LT 608 and maincpu.pb@FF8502==0x1C">maincpu.pw@FF85B0=606</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="P1 Karin easy special moves"/>
+  <cheat desc="GURENKEN">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1D">maincpu.pw@FF8580=0204</action>
+    </script>
+  </cheat>
+  <cheat desc="MUJINKYAKU">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1D">maincpu.pw@FF8588=204</action>
+    </script>
+  </cheat>
+  <cheat desc="RESSENHA">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1D">maincpu.pw@FF8590=206</action>
+    </script>
+  </cheat>
+  <cheat desc="HOSHO">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1D">maincpu.pw@FF8598=204</action>
+    </script>
+  </cheat>
+  <cheat desc="YASA GAESHI"><comment>P/K</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1D">maincpu.pw@FF85A0=204</action>
+    </script>
+  </cheat>
+  <cheat desc="KANZUKI-RYU SHIPIKAIBYAKU">
+    <parameter>
+      <item value="0x1">f+P</item>
+      <item value="0x2">df,f+P</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1D and param == 1 and maincpu.pw@FF85B0 LT 20A">maincpu.pw@FF85B0=20A</action>
+      <action condition="maincpu.pb@FF8502==0x1D and param == 2 and maincpu.pw@FF85B0 LT 20A">maincpu.pw@FF85B0=208</action>
+    </script>
+  </cheat>
+  <cheat desc="RESSENCHO">
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1D">maincpu.pw@FF85B8=204</action>
+    </script>
+  </cheat>
+  <cheat desc="KANZUKI-RYU KO'O KEN">
+    <parameter>
+      <item value="0x1">df+K</item>
+      <item value="0x2">d,df+K</item>
+    </parameter>
+    <script state="run">
+      <action condition="maincpu.pb@FF8502==0x1D and param == 1 and maincpu.pw@FF85C0 LT 208">maincpu.pw@FF85C0=208</action>
+      <action condition="maincpu.pb@FF8502==0x1D and param == 2 and maincpu.pw@FF85C0 LT 206">maincpu.pw@FF85C0=206</action>
+    </script>
+  </cheat>
+  <cheat desc="ARAKUMA IRASHI"><comment>f+K</comment>
+    <script state="run">
+      <action condition="maincpu.pb@FF840B == 01 and maincpu.pb@FF8502==0x1D">maincpu.pd@FF85C8=06020001</action>
+      <action condition="maincpu.pb@FF840B == 00 and maincpu.pb@FF8502==0x1D">maincpu.pd@FF85C8=060200FF</action>
+    </script>
+  </cheat>
+
+  
+
+
+  <cheat desc=" "/>
+  <cheat desc="Infinite air command throw range">
+    <comment> bp 2e4b2,a6==ff8400,{pc=pc+4;g} bp 2e6e4,a6==ff8400,{pc=pc+4;g} cammy claw air command throw</comment>
+    <script state="run">
+      <action>maincpu.od@2E4B2=4E714E71</action>
+      <action>maincpu.od@2E4B2=4E714E71</action>
+      <action>maincpu.od@2E6E4=4E714E71</action>
+      <action>maincpu.od@2E6E4=4E714E71</action>
+    </script>    
+  </cheat>
+  <cheat desc="All ISM can start OC">
+    <script state="run">
+      <action>maincpu.ow@2E09C=4E71</action>
+    </script>
+  </cheat>
+  
+  <cheat desc="Finish this Round Now!"> <comment>Disable Infinite Time before activating this cheat</comment>
+    <script state="on">
+      <action>maincpu.pb@FF8109=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="Select Colour Unlock"> <comment>Select it before inserting coin(s). (NOTE - the colour refers to the background colour after you've inserted a credit)</comment>
+    <parameter>
+      <item value="0x00">Cream (Default)</item>
+      <item value="0x01">Red (Unlocks Classical Mode)</item>
+      <item value="0x02">Green (Unlocks Balrog, Juli, and Juni)</item>
+      <item value="0x03">Blue (Unlocks Mazi Mode and Saikyou Mode)</item>
+      <item value="0x04">Light Blue (Unlocks Survival, Dramatic and Final Battle Mode)</item>
+    </parameter>
+    <script state="change">
+      <action>maincpu.pb@FF80EE=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc="Select Backdrop">
+    <parameter>
+      <item value="0x00">Japan (Sunset)</item>
+      <item value="0x02">USA (Hotel)</item>
+      <item value="0x04">Japan (Cave)</item>
+      <item value="0x06">USA (Hangar)</item>
+      <item value="0x08">China</item>
+      <item value="0x0A">Thailand (Temple)</item>
+      <item value="0x0C">USA (Japanese)</item>
+      <item value="0x0E">USA (Metro City)</item>
+      <item value="0x10">England</item>
+      <item value="0x12">Italy</item>
+      <item value="0x14">Point 48106 (Night)</item>
+      <item value="0x16">Thailand (Statue)</item>
+      <item value="0x18">Japan (Swings)</item>
+      <item value="0x1A">Japan (Market at Day)</item>
+      <item value="0x1C">USA (Military)</item>
+      <item value="0x1E">India</item>
+      <item value="0x20">Russia</item>
+      <item value="0x22">Hong Kong</item>
+      <item value="0x2A">Point 48106 (Day)</item>
+      <item value="0x2C">Greece</item>
+      <item value="0x30">Japan (Sumo Ring)</item>
+      <item value="0x32">Brazil</item>
+      <item value="0x34">Japan (Seaside)</item>
+      <item value="0x36">USA (Prison)</item>
+      <item value="0x38">Spain</item>
+      <item value="0x3A">Japan (Market at Night)</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pb@FF8101=param</action> <!-- Ken -->
+    </script>
+  </cheat>
+
+  <cheat desc="Skip Character Intros">
+    <script state="run">
+      <action>maincpu.pb@FF8431=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="Skip Map Screen"> <comment>Normal and Dramatic Modes only</comment>
+    <script state="run">
+      <action>maincpu.pb@FF8111=FF</action>
+    </script>
+  </cheat>
+
+  <cheat desc="Select Dramatic Battle Adversary 1"> <comment>Select a different character for each adversary as cloned characters will be skipped</comment>
+    <parameter>
+      <item value="0x00">Ryu</item>
+      <item value="0x01">Ken</item>
+      <item value="0x02">Akuma</item>
+      <item value="0x03">Charlie</item>
+      <item value="0x04">Chun-Li</item>
+      <item value="0x05">Adon</item>`
+      <item value="0x06">Sodom</item>
+      <item value="0x07">Guy</item>
+      <item value="0x08">Birdie</item>
+      <item value="0x09">Rose</item>
+      <item value="0x0A">M. Bison</item>
+      <item value="0x0B">Sagat</item>
+      <item value="0x0C">Dan</item>
+      <item value="0x0D">Sakura</item>
+      <item value="0x0E">Rolento</item>
+      <item value="0x0F">Dhalsim</item>
+      <item value="0x10">Zangief</item>
+      <item value="0x11">Gen</item>
+      <item value="0x15">Balrog</item>
+      <item value="0x16">Cammy</item>
+      <item value="0x18">E. Honda</item>
+      <item value="0x19">Blanka</item>
+      <item value="0x1A">R. Mika</item>
+      <item value="0x1B">Cody</item>
+      <item value="0x1C">Vega</item>
+      <item value="0x1D">Karin</item>
+      <item value="0x1E">#Juli</item>
+      <item value="0x1F">#Juni</item>
+    </parameter>
+    <script state="on">
+      <action>temp0 =maincpu.ob@00B9E0</action>
+    </script>
+    <script state="run">
+      <action>maincpu.ob@00B9E0=param</action>
+    </script>
+    <script state="off">
+      <action>maincpu.ob@00B9E0=temp0 </action>
+    </script>
+  </cheat>
+
+  <cheat desc="Select Dramatic Battle Adversary 2"> <comment>Select a different character for each adversary as cloned characters will be skipped</comment>
+    <parameter>
+      <item value="0x00">Ryu</item>
+      <item value="0x01">Ken</item>
+      <item value="0x02">Akuma</item>
+      <item value="0x03">Charlie</item>
+      <item value="0x04">Chun-Li</item>
+      <item value="0x05">Adon</item>
+      <item value="0x06">Sodom</item>
+      <item value="0x07">Guy</item>
+      <item value="0x08">Birdie</item>
+      <item value="0x09">Rose</item>
+      <item value="0x0A">M. Bison</item>
+      <item value="0x0B">Sagat</item>
+      <item value="0x0C">Dan</item>
+      <item value="0x0D">Sakura</item>
+      <item value="0x0E">Rolento</item>
+      <item value="0x0F">Dhalsim</item>
+      <item value="0x10">Zangief</item>
+      <item value="0x11">Gen</item>
+      <item value="0x15">Balrog</item>
+      <item value="0x16">Cammy</item>
+      <item value="0x18">E. Honda</item>
+      <item value="0x19">Blanka</item>
+      <item value="0x1A">R. Mika</item>
+      <item value="0x1B">Cody</item>
+      <item value="0x1C">Vega</item>
+      <item value="0x1D">Karin</item>
+      <item value="0x1E">#Juli</item>
+      <item value="0x1F">#Juni</item>
+    </parameter>
+    <script state="on">
+      <action>temp0 =maincpu.ob@00B9E1</action>
+    </script>
+    <script state="run">
+      <action>maincpu.ob@00B9E1=param</action>
+    </script>
+    <script state="off">
+      <action>maincpu.ob@00B9E1=temp0 </action>
+    </script>
+  </cheat>
+
+  <cheat desc="Select Dramatic Battle Adversary 3"> <comment>Select a different character for each adversary as cloned characters will be skipped</comment>
+    <parameter>
+      <item value="0x00">Ryu</item>
+      <item value="0x01">Ken</item>
+      <item value="0x02">Akuma</item>
+      <item value="0x03">Charlie</item>
+      <item value="0x04">Chun-Li</item>
+      <item value="0x05">Adon</item>
+      <item value="0x06">Sodom</item>
+      <item value="0x07">Guy</item>
+      <item value="0x08">Birdie</item>
+      <item value="0x09">Rose</item>
+      <item value="0x0A">M. Bison</item>
+      <item value="0x0B">Sagat</item>
+      <item value="0x0C">Dan</item>
+      <item value="0x0D">Sakura</item>
+      <item value="0x0E">Rolento</item>
+      <item value="0x0F">Dhalsim</item>
+      <item value="0x10">Zangief</item>
+      <item value="0x11">Gen</item>
+      <item value="0x15">Balrog</item>
+      <item value="0x16">Cammy</item>
+      <item value="0x18">E. Honda</item>
+      <item value="0x19">Blanka</item>
+      <item value="0x1A">R. Mika</item>
+      <item value="0x1B">Cody</item>
+      <item value="0x1C">Vega</item>
+      <item value="0x1D">Karin</item>
+      <item value="0x1E">#Juli</item>
+      <item value="0x1F">#Juni</item>
+    </parameter>
+    <script state="on">
+      <action>temp0 =maincpu.ob@00B9E2</action>
+    </script>
+    <script state="run">
+      <action>maincpu.ob@00B9E2=param</action>
+    </script>
+    <script state="off">
+      <action>maincpu.ob@00B9E2=temp0 </action>
+    </script>
+  </cheat>
+
+  <cheat desc="Select Dramatic Battle Adversary 4"> <comment>Select a different character for each adversary as cloned characters will be skipped</comment>
+    <parameter>
+      <item value="0x00">Ryu</item>
+      <item value="0x01">Ken</item>
+      <item value="0x02">Akuma</item>
+      <item value="0x03">Charlie</item>
+      <item value="0x04">Chun-Li</item>
+      <item value="0x05">Adon</item>
+      <item value="0x06">Sodom</item>
+      <item value="0x07">Guy</item>
+      <item value="0x08">Birdie</item>
+      <item value="0x09">Rose</item>
+      <item value="0x0A">M. Bison</item>
+      <item value="0x0B">Sagat</item>
+      <item value="0x0C">Dan</item>
+      <item value="0x0D">Sakura</item>
+      <item value="0x0E">Rolento</item>
+      <item value="0x0F">Dhalsim</item>
+      <item value="0x10">Zangief</item>
+      <item value="0x11">Gen</item>
+      <item value="0x15">Balrog</item>
+      <item value="0x16">Cammy</item>
+      <item value="0x18">E. Honda</item>
+      <item value="0x19">Blanka</item>
+      <item value="0x1A">R. Mika</item>
+      <item value="0x1B">Cody</item>
+      <item value="0x1C">Vega</item>
+      <item value="0x1D">Karin</item>
+      <item value="0x1E">#Juli</item>
+      <item value="0x1F">#Juni</item>
+    </parameter>
+    <script state="on">
+      <action>temp0 =maincpu.ob@00B9E3</action>
+    </script>
+    <script state="run">
+      <action>maincpu.ob@00B9E3=param</action>
+    </script>
+    <script state="off">
+      <action>maincpu.ob@00B9E3=temp0 </action>
+    </script>
+  </cheat>
+
+  <cheat desc="Select Dramatic Battle Adversary 5"> <comment>Select a different character for each adversary as cloned characters will be skipped</comment>
+    <parameter>
+      <item value="0x00">Ryu</item>
+      <item value="0x01">Ken</item>
+      <item value="0x02">Akuma</item>
+      <item value="0x03">Charlie</item>
+      <item value="0x04">Chun-Li</item>
+      <item value="0x05">Adon</item>
+      <item value="0x06">Sodom</item>
+      <item value="0x07">Guy</item>
+      <item value="0x08">Birdie</item>
+      <item value="0x09">Rose</item>
+      <item value="0x0A">M. Bison</item>
+      <item value="0x0B">Sagat</item>
+      <item value="0x0C">Dan</item>
+      <item value="0x0D">Sakura</item>
+      <item value="0x0E">Rolento</item>
+      <item value="0x0F">Dhalsim</item>
+      <item value="0x10">Zangief</item>
+      <item value="0x11">Gen</item>
+      <item value="0x15">Balrog</item>
+      <item value="0x16">Cammy</item>
+      <item value="0x18">E. Honda</item>
+      <item value="0x19">Blanka</item>
+      <item value="0x1A">R. Mika</item>
+      <item value="0x1B">Cody</item>
+      <item value="0x1C">Vega</item>
+      <item value="0x1D">Karin</item>
+      <item value="0x1E">#Juli</item>
+      <item value="0x1F">#Juni</item>
+    </parameter>
+    <script state="on">
+      <action>temp0 =maincpu.ob@00B9E8</action>
+    </script>
+    <script state="run">
+      <action>maincpu.ob@00B9E8=param</action>
+    </script>
+    <script state="off">
+      <action>maincpu.ob@00B9E8=temp0 </action>
+    </script>
+  </cheat>
+
+  <cheat desc="Select Dramatic Battle Adversary 6"> <comment>Select a different character for each adversary as cloned characters will be skipped</comment>
+    <parameter>
+      <item value="0x00">Ryu</item>
+      <item value="0x01">Ken</item>
+      <item value="0x02">Akuma</item>
+      <item value="0x03">Charlie</item>
+      <item value="0x04">Chun-Li</item>
+      <item value="0x05">Adon</item>
+      <item value="0x06">Sodom</item>
+      <item value="0x07">Guy</item>
+      <item value="0x08">Birdie</item>
+      <item value="0x09">Rose</item>
+      <item value="0x0A">M. Bison</item>
+      <item value="0x0B">Sagat</item>
+      <item value="0x0C">Dan</item>
+      <item value="0x0D">Sakura</item>
+      <item value="0x0E">Rolento</item>
+      <item value="0x0F">Dhalsim</item>
+      <item value="0x10">Zangief</item>
+      <item value="0x11">Gen</item>
+      <item value="0x15">Balrog</item>
+      <item value="0x16">Cammy</item>
+      <item value="0x18">E. Honda</item>
+      <item value="0x19">Blanka</item>
+      <item value="0x1A">R. Mika</item>
+      <item value="0x1B">Cody</item>
+      <item value="0x1C">Vega</item>
+      <item value="0x1D">Karin</item>
+      <item value="0x1E">#Juli</item>
+      <item value="0x1F">#Juni</item>
+    </parameter>
+    <script state="on">
+      <action>temp0 =maincpu.ob@00B9E9</action>
+    </script>
+    <script state="run">
+      <action>maincpu.ob@00B9E9=param</action>
+    </script>
+    <script state="off">
+      <action>maincpu.ob@00B9E9=temp0 </action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+
+  <cheat desc="P1 Skip Story"> <comment>Normal Mode only</comment>
+    <script state="run">
+      <action>maincpu.pb@FF8549=FF</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Skip Story"> <comment>Normal mode only</comment>
+    <script state="run">
+      <action>maincpu.pb@FF8949=FF</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="Select Normal and Survival Mode cheats on the Character Selection"/>
+  <cheat desc="Screen. Select Final Battle Mode cheat after ISM Selection Screen."/>
+  <cheat desc="They may work for different players configs."/>
+  <cheat desc=" "/>
+
+  <cheat desc="P1 Select Mode">
+    <parameter>
+      <item value="0x00">Normal Mode</item>
+      <item value="0xFF">Survival Mode</item>
+      <item value="0x01">Final Battle Mode</item>
+    </parameter>
+    <script state="change">
+      <action condition="(param == 00) OR (param == FF)">maincpu.pb@FF854B=param</action>
+      <action condition="(param == 01)">maincpu.pb@FF8111=param, maincpu.pd@FF8540=FFFFFFFF, maincpu.pb@FF8549=FF</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Select Mode">
+    <parameter>
+      <item value="0x00">Normal Mode</item>
+      <item value="0xFF">Survival Mode</item>
+      <item value="0x01">Final Battle Mode</item>
+    </parameter>
+    <script state="change">
+      <action condition="(param == 00) OR (param == FF)">maincpu.pb@FF894B=param</action>
+      <action condition="(param == 01)">maincpu.pb@FF8111=param, maincpu.pd@FF8940=FFFFFFFF, maincpu.pb@FF8949=FF</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1+P2 Dramatic Battle Mode">
+    <script state="run">
+      <action>maincpu.pb@FF8168=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+
+  <cheat desc="P1 Infinite Energy">
+    <script state="run">
+      <action>maincpu.pd@FF8450=00900090</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Drain All Energy Now!">
+    <script state="on">
+      <action>maincpu.pd@FF8450=00000000</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Infinite Power">
+    <script state="run">
+      <action>maincpu.pb@FF851F=90</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 No Power">
+    <script state="run">
+      <action>maincpu.pb@FF851F=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Refill Power Now!">
+    <script state="on">
+      <action>maincpu.pb@FF851F=90</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Drain Power Now!">
+    <script state="on">
+      <action>maincpu.pb@FF851F=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Never Get Dizzied">
+    <script state="run">
+      <action>maincpu.pw@FF86CC=0028</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Always Get Dizzied When Hit">
+    <script state="run">
+      <action>maincpu.pw@FF86CC=FAFA</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Never Get Guard Crushed">
+    <script state="run">
+      <action>maincpu.pw@FF864C=7000</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Always Get Guard Crushed When Blocking">
+    <script state="run">
+      <action>maincpu.pw@FF864C=1010</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Infinite Fireballs">
+    <script state="run">
+      <action>maincpu.pb@FF8638=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Never have use of Fireballs">
+    <script state="run">
+      <action>maincpu.pb@FF8638=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Infinite Taunts">
+    <script state="run">
+      <action>maincpu.pb@FF84BC=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Infinite Air Special/Super moves">
+    <script state="run">
+      <action>maincpu.pb@FF8431=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Recalculate Damage When Hit">
+    <script state="run">
+      <action>maincpu.pw@FF865A=0303</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Always Be in Original Combo"> <comment>Activate only during an Original combo to get the afterimages!</comment>
+    <script state="on">
+      <action>temp0 =maincpu.pb@FF84B9</action>
+    </script>
+    <script state="run">
+      <action>maincpu.pb@FF84B9=01</action>
+    </script>
+    <script state="off">
+      <action>maincpu.pb@FF84B9=temp0 </action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Infinite Time for Original Combo">
+    <script state="run">
+      <action>maincpu.pb@FF84BB=9A</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Select Original Combo Afterimage Type">
+    <parameter>
+      <item value="0x000F0005">LP+LK Combo</item>
+      <item value="0x00300010">MP+MK Combo</item>
+      <item value="0x0051001B">HP+HK Combo</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pd@FF86A6=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Select Control"> <comment>Disable this cheat if you use the Boss mode cheat below</comment>
+    <parameter>
+      <item value="0x00">User</item>
+      <item value="0x01">CPU</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pb@FF8525=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Boss Mode"> <comment>Final Bison, etc</comment>
+    <script state="run">
+      <action>maincpu.pb@FF8524=01</action>
+      <action condition="maincpu.pb@FF8559==01">maincpu.pb@FF8525=01</action>
+      <action condition="maincpu.pb@FF8559==00">maincpu.pb@FF8525=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="Enable these Mode cheats on the Character Selection Screen."/>
+  <cheat desc=" "/>
+
+  <cheat desc="P1 Enable Classical Mode Now!"> <comment>Alternative Ism. No gauges, air blocks, taunts etc.</comment>
+    <script state="on">
+      <action>maincpu.pb@FF855E=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Enable Mazi Mode Now!"> <comment>Greater damage inflicted, greater damage done. Only lose one round to lose.</comment>
+    <script state="on">
+      <action>maincpu.pb@FF855A=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Enable Saikyou Mode Now!"> <comment>Easy to get dizzy, slightly less damage done, rubbish!</comment>
+    <script state="on">
+      <action>maincpu.pb@FF8531=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+
+  <cheat desc="P1 Select ISM"> <comment>Enable only after selecting your ISM on the Character Selection screen</comment>
+    <parameter>
+      <item value="0x01">A-ISM</item>
+      <item value="0x02">V-ISM</item>
+      <item value="0x03">X-ISM</item>
+      <item value="0x04">S-ISM</item>
+    </parameter>
+    <script state="run">
+      <action condition="(param==01)">maincpu.pb@FF8523=00</action>
+      <action condition="(param==01)">maincpu.pb@FF8532=00</action>
+      <action condition="(param==02)">maincpu.pb@FF8523=01</action>
+      <action condition="(param==02)">maincpu.pb@FF8532=01</action>
+      <action condition="(param==03)">maincpu.pb@FF8523=FF</action>
+      <action condition="(param==03)">maincpu.pb@FF8532=FF</action>
+      <action condition="(param==04)">maincpu.pb@FF8523=02</action>
+      <action condition="(param==04)">maincpu.pb@FF8532=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Select Character"> <comment>Free player selection - Use on the level VS screen.</comment>
+    <parameter>
+      <item value="0x00">Ryu</item>
+      <item value="0x01">Ken Masters</item>
+      <item value="0x02">Akuma</item>
+      <item value="0x03">Charlie</item>
+      <item value="0x04">Chun-Li</item>
+      <item value="0x05">Adon</item>
+      <item value="0x06">Sodom</item>
+      <item value="0x07">Guy</item>
+      <item value="0x08">Birdie</item>
+      <item value="0x09">Rose</item>
+      <item value="0x0A">M. Bison</item>
+      <item value="0x0B">Sagat</item>
+      <item value="0x0C">Dan Hibiki</item>
+      <item value="0x0D">Sakura Kasugano</item>
+      <item value="0x0E">Rolento Schugerg</item>
+      <item value="0x0F">Dhalsim</item>
+      <item value="0x10">Zangief</item>
+      <item value="0x11">Gen (Sou-ryuu stance)</item>
+      <item value="0x13">#Gen (Ki-ryuu stance)</item>
+      <item value="0x15">#Balrog</item>
+      <item value="0x16">Cammy</item>
+      <item value="0x18">Edmund Honda</item>
+      <item value="0x19">Blanka</item>
+      <item value="0x1A">Rainbow Mika Nanakawa</item>
+      <item value="0x1B">Cody</item>
+      <item value="0x1C">Vega</item>
+      <item value="0x1D">Karin Kanzuki</item>
+      <item value="0x1E">#Juli</item>
+      <item value="0x1F">#Juni</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pb@FF8502=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+
+  <cheat desc="P2 Infinite Energy">
+    <script state="run">
+      <action>maincpu.pd@FF8850=00900090</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Drain All Energy Now!">
+    <script state="on">
+      <action>maincpu.pd@FF8850=00000000</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Infinite Power">
+    <script state="run">
+      <action>maincpu.pb@FF891F=90</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 No Power">
+    <script state="run">
+      <action>maincpu.pb@FF891F=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Refill Power Now!">
+    <script state="on">
+      <action>maincpu.pb@FF891F=90</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Drain Power Now!">
+    <script state="on">
+      <action>maincpu.pb@FF891F=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Never Get Dizzied">
+    <script state="run">
+      <action>maincpu.pw@FF8ACC=0028</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Always Get Dizzied When Hit">
+    <script state="run">
+      <action>maincpu.pw@FF8ACC=FAFA</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Never Get Guard Crushed">
+    <script state="run">
+      <action>maincpu.pw@FF8A4C=7000</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Always Get Guard Crushed When Blocking">
+    <script state="run">
+      <action>maincpu.pw@FF8A4C=1010</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Infinite Fireballs">
+    <script state="run">
+      <action>maincpu.pb@FF8A38=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Never have use of Fireballs">
+    <script state="run">
+      <action>maincpu.pb@FF8A38=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Infinite Taunts">
+    <script state="run">
+      <action>maincpu.pb@FF88BC=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Infinite Air Special/Super moves">
+    <script state="run">
+      <action>maincpu.pb@FF8831=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Recalculate Damage When Hit">
+    <script state="run">
+      <action>maincpu.pw@FF8A5A=0303</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Always Be in Original Combo"> <comment>Activate only during an Original combo to get the afterimages!</comment>
+    <script state="on">
+      <action>temp0 =maincpu.pb@FF88B9</action>
+    </script>
+    <script state="run">
+      <action>maincpu.pb@FF88B9=01</action>
+    </script>
+    <script state="off">
+      <action>maincpu.pb@FF88B9=temp0 </action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Infinite Time for Original Combo">
+    <script state="run">
+      <action>maincpu.pb@FF88BB=9A</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Select Original Combo Afterimage Type">
+    <parameter>
+      <item value="0x000F0005">LP+LK Combo</item>
+      <item value="0x00300010">MP+MK Combo</item>
+      <item value="0x0051001B">HP+HK Combo</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pd@FF8AA6=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Select Control"> <comment>Disable this cheat if you use the Boss mode cheat below</comment>
+    <parameter>
+      <item value="0x00">User</item>
+      <item value="0x01">CPU</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pb@FF8925=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Boss Mode"> <comment>Final Bison, etc</comment>
+    <script state="run">
+      <action>maincpu.pb@FF8924=01</action>
+      <action condition="maincpu.pb@FF8959==01">maincpu.pb@FF8925=01</action>
+      <action condition="maincpu.pb@FF8959==00">maincpu.pb@FF8925=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="Enable these Mode cheats on the Character Selection Screen."/>
+  <cheat desc=" "/>
+
+  <cheat desc="P2 Enable Classical Mode Now!"> <comment>Alternative Ism. No gauges, air blocks, taunts etc.</comment>
+    <script state="on">
+      <action>maincpu.pb@FF895E=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Enable Mazi Mode Now!"> <comment>Greater damage inflicted, greater damage done. Only lose one round to lose.</comment>
+    <script state="on">
+      <action>maincpu.pb@FF895A=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Enable Saikyou Mode Now!"> <comment>Easy to get dizzy, slightly less damage done, rubbish!</comment>
+    <script state="on">
+      <action>maincpu.pb@FF8931=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+
+  <cheat desc="P2 Select ISM"> <comment>Enable only after selecting your ISM on the Character Selection screen</comment>
+    <parameter>
+      <item value="0x01">A-ISM</item>
+      <item value="0x02">V-ISM</item>
+      <item value="0x03">X-ISM</item>
+      <item value="0x04">S-ISM</item>
+    </parameter>
+    <script state="run">
+      <action condition="(param==01)">maincpu.pb@FF8923=00</action>
+      <action condition="(param==01)">maincpu.pb@FF8932=00</action>
+      <action condition="(param==02)">maincpu.pb@FF8923=01</action>
+      <action condition="(param==02)">maincpu.pb@FF8932=01</action>
+      <action condition="(param==03)">maincpu.pb@FF8923=FF</action>
+      <action condition="(param==03)">maincpu.pb@FF8932=FF</action>
+      <action condition="(param==04)">maincpu.pb@FF8923=02</action>
+      <action condition="(param==04)">maincpu.pb@FF8932=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Select Character"> <comment>Free player selection - Use on the level VS screen.</comment>
+    <parameter>
+      <item value="0x00">Ryu</item>
+      <item value="0x01">Ken Masters</item>
+      <item value="0x02">Akuma</item>
+      <item value="0x03">Charlie</item>
+      <item value="0x04">Chun-Li</item>
+      <item value="0x05">Adon</item>
+      <item value="0x06">Sodom</item>
+      <item value="0x07">Guy</item>
+      <item value="0x08">Birdie</item>
+      <item value="0x09">Rose</item>
+      <item value="0x0A">M. Bison</item>
+      <item value="0x0B">Sagat</item>
+      <item value="0x0C">Dan Hibiki</item>
+      <item value="0x0D">Sakura Kasugano</item>
+      <item value="0x0E">Rolento Schugerg</item>
+      <item value="0x0F">Dhalsim</item>
+      <item value="0x10">Zangief</item>
+      <item value="0x11">Gen (Sou-ryuu stance)</item>
+      <item value="0x13">#Gen (Ki-ryuu stance)</item>
+      <item value="0x15">#Balrog</item>
+      <item value="0x16">Cammy</item>
+      <item value="0x18">Edmund Honda</item>
+      <item value="0x19">Blanka</item>
+      <item value="0x1A">Rainbow Mika Nanakawa</item>
+      <item value="0x1B">Cody</item>
+      <item value="0x1C">Vega</item>
+      <item value="0x1D">Karin Kanzuki</item>
+      <item value="0x1E">#Juli</item>
+      <item value="0x1F">#Juni</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pb@FF8902=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+
+  <cheat desc="P3 Infinite Energy">
+    <script state="run">
+      <action>maincpu.pd@FF8C50=00900090</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Drain All Energy Now!">
+    <script state="on">
+      <action>maincpu.pd@FF8C50=00000000</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Infinite Power">
+    <script state="run">
+      <action>maincpu.pb@FF8D1F=90</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 No Power">
+    <script state="run">
+      <action>maincpu.pb@FF8D1F=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Refill Power Now!">
+    <script state="on">
+      <action>maincpu.pb@FF8D1F=90</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Drain Power Now!">
+    <script state="on">
+      <action>maincpu.pb@FF8D1F=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Never Get Dizzied">
+    <script state="run">
+      <action>maincpu.pw@FF8ECC=0028</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Always Get Dizzied When Hit">
+    <script state="run">
+      <action>maincpu.pw@FF8ECC=FAFA</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Never Get Guard Crushed">
+    <script state="run">
+      <action>maincpu.pw@FF8E4C=7000</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Always Get Guard Crushed When Blocking">
+    <script state="run">
+      <action>maincpu.pw@FF8E4C=1010</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Infinite Fireballs">
+    <script state="run">
+      <action>maincpu.pb@FF8E38=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Never have use of Fireballs">
+    <script state="run">
+      <action>maincpu.pb@FF8E38=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Infinite Taunts">
+    <script state="run">
+      <action>maincpu.pb@FF8CBC=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Infinite Air Special/Super moves">
+    <script state="run">
+      <action>maincpu.pb@FF8C31=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Recalculate Damage When Hit">
+    <script state="run">
+      <action>maincpu.pw@FF8E5A=0303</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Always Be in Original Combo"> <comment>Activate only during an Original combo to get the afterimages!</comment>
+    <script state="on">
+      <action>temp0 =maincpu.pb@FF8CB9</action>
+    </script>
+    <script state="run">
+      <action>maincpu.pb@FF8CB9=01</action>
+    </script>
+    <script state="off">
+      <action>maincpu.pb@FF8CB9=temp0 </action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Infinite Time for Original Combo">
+    <script state="run">
+      <action>maincpu.pb@FF8CBB=9A</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Select Original Combo Afterimage Type">
+    <parameter>
+      <item value="0x000F0005">LP+LK Combo</item>
+      <item value="0x00300010">MP+MK Combo</item>
+      <item value="0x0051001B">HP+HK Combo</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pd@FF8EA6=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Select Control"> <comment>Disable this cheat if you use the Boss mode cheat below</comment>
+    <parameter>
+      <item value="0x00">User</item>
+      <item value="0x01">CPU</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pb@FF8D25=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Boss Mode"> <comment>Final Bison, etc</comment>
+    <script state="run">
+      <action>maincpu.pb@FF8D24=01</action>
+      <action condition="maincpu.pb@FF8D59==01">maincpu.pb@FF8D25=01</action>
+      <action condition="maincpu.pb@FF8D59==00">maincpu.pb@FF8D25=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="Enable these Mode cheats on the Character Selection Screen."/>
+  <cheat desc=" "/>
+
+  <cheat desc="P3 Enable Classical Mode Now!"> <comment>Alternative Ism. No gauges, air blocks, taunts etc.</comment>
+    <script state="on">
+      <action>maincpu.pb@FF8D5E=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Enable Mazi Mode Now!"> <comment>Greater damage inflicted, greater damage done. Only lose one round to lose.</comment>
+    <script state="on">
+      <action>maincpu.pb@FF8D5A=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Enable Saikyou Mode Now!"> <comment>Easy to get dizzy, slightly less damage done, rubbish!</comment>
+    <script state="on">
+      <action>maincpu.pb@FF8D31=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+
+  <cheat desc="P3 Select ISM"> <comment>Enable only after selecting your ISM on the Character Selection screen</comment>
+    <parameter>
+      <item value="0x01">A-ISM</item>
+      <item value="0x02">V-ISM</item>
+      <item value="0x03">X-ISM</item>
+      <item value="0x04">S-ISM</item>
+    </parameter>
+    <script state="run">
+      <action condition="(param==01)">maincpu.pb@FF8D23=00</action>
+      <action condition="(param==01)">maincpu.pb@FF8D32=00</action>
+      <action condition="(param==02)">maincpu.pb@FF8D23=01</action>
+      <action condition="(param==02)">maincpu.pb@FF8D32=01</action>
+      <action condition="(param==03)">maincpu.pb@FF8D23=FF</action>
+      <action condition="(param==03)">maincpu.pb@FF8D32=FF</action>
+      <action condition="(param==04)">maincpu.pb@FF8D23=02</action>
+      <action condition="(param==04)">maincpu.pb@FF8D32=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P3 Select Character"> <comment>Free player selection - Use on the level VS screen.</comment>
+    <parameter>
+      <item value="0x00">Ryu</item>
+      <item value="0x01">Ken Masters</item>
+      <item value="0x02">Akuma</item>
+      <item value="0x03">Charlie</item>
+      <item value="0x04">Chun-Li</item>
+      <item value="0x05">Adon</item>
+      <item value="0x06">Sodom</item>
+      <item value="0x07">Guy</item>
+      <item value="0x08">Birdie</item>
+      <item value="0x09">Rose</item>
+      <item value="0x0A">M. Bison</item>
+      <item value="0x0B">Sagat</item>
+      <item value="0x0C">Dan Hibiki</item>
+      <item value="0x0D">Sakura Kasugano</item>
+      <item value="0x0E">Rolento Schugerg</item>
+      <item value="0x0F">Dhalsim</item>
+      <item value="0x10">Zangief</item>
+      <item value="0x11">Gen (Sou-ryuu stance)</item>
+      <item value="0x13">#Gen (Ki-ryuu stance)</item>
+      <item value="0x15">#Balrog</item>
+      <item value="0x16">Cammy</item>
+      <item value="0x18">Edmund Honda</item>
+      <item value="0x19">Blanka</item>
+      <item value="0x1A">Rainbow Mika Nanakawa</item>
+      <item value="0x1B">Cody</item>
+      <item value="0x1C">Vega</item>
+      <item value="0x1D">Karin Kanzuki</item>
+      <item value="0x1E">#Juli</item>
+      <item value="0x1F">#Juni</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pb@FF8D02=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+
+  <cheat desc="P4 Infinite Energy">
+    <script state="run">
+      <action>maincpu.pd@FF9050=00900090</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Drain All Energy Now!">
+    <script state="on">
+      <action>maincpu.pd@FF9050=00000000</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Infinite Power">
+    <script state="run">
+      <action>maincpu.pb@FF911F=90</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 No Power">
+    <script state="run">
+      <action>maincpu.pb@FF911F=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Refill Power Now!">
+    <script state="on">
+      <action>maincpu.pb@FF911F=90</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Drain Power Now!">
+    <script state="on">
+      <action>maincpu.pb@FF911F=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Never Get Dizzied">
+    <script state="run">
+      <action>maincpu.pw@FF92CC=0028</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Always Get Dizzied When Hit">
+    <script state="run">
+      <action>maincpu.pw@FF92CC=FAFA</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Never Get Guard Crushed">
+    <script state="run">
+      <action>maincpu.pw@FF924C=7000</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Always Get Guard Crushed When Blocking">
+    <script state="run">
+      <action>maincpu.pw@FF924C=1010</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Infinite Fireballs">
+    <script state="run">
+      <action>maincpu.pb@FF9238=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Never have use of Fireballs">
+    <script state="run">
+      <action>maincpu.pb@FF9238=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Infinite Taunts">
+    <script state="run">
+      <action>maincpu.pb@FF90BC=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Infinite Air Special/Super moves">
+    <script state="run">
+      <action>maincpu.pb@FF9031=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Recalculate Damage When Hit">
+    <script state="run">
+      <action>maincpu.pw@FF925A=0303</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Always Be in Original Combo"> <comment>Activate only during an Original combo to get the afterimages!</comment>
+    <script state="on">
+      <action>temp0 =maincpu.pb@FF90B9</action>
+    </script>
+    <script state="run">
+      <action>maincpu.pb@FF90B9=01</action>
+    </script>
+    <script state="off">
+      <action>maincpu.pb@FF90B9=temp0 </action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Infinite Time for Original Combo">
+    <script state="run">
+      <action>maincpu.pb@FF90BB=9A</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Select Original Combo Afterimage Type">
+    <parameter>
+      <item value="0x000F0005">LP+LK Combo</item>
+      <item value="0x00300010">MP+MK Combo</item>
+      <item value="0x0051001B">HP+HK Combo</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pd@FF92A6=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Select Control"> <comment>Disable this cheat if you use the Boss mode cheat below</comment>
+    <parameter>
+      <item value="0x00">User</item>
+      <item value="0x01">CPU</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pb@FF9125=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Boss Mode"> <comment>Final Bison, etc</comment>
+    <script state="run">
+      <action>maincpu.pb@FF9124=01</action>
+      <action condition="maincpu.pb@FF9159==01">maincpu.pb@FF9125=01</action>
+      <action condition="maincpu.pb@FF9159==00">maincpu.pb@FF9125=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+  <cheat desc="Enable these Mode cheats on the Character Selection Screen."/>
+  <cheat desc=" "/>
+
+  <cheat desc="P4 Enable Classical Mode Now!"> <comment>Alternative Ism. No gauges, air blocks, taunts etc.</comment>
+    <script state="on">
+      <action>maincpu.pb@FF915E=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Enable Mazi Mode Now!"> <comment>Greater damage inflicted, greater damage done. Only lose one round to lose.</comment>
+    <script state="on">
+      <action>maincpu.pb@FF915A=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Enable Saikyou Mode Now!"> <comment>Easy to get dizzy, slightly less damage done, rubbish!</comment>
+    <script state="on">
+      <action>maincpu.pb@FF9131=01</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+
+  <cheat desc="P4 Select ISM"> <comment>Enable only after selecting your ISM on the Character Selection screen</comment>
+    <parameter>
+      <item value="0x01">A-ISM</item>
+      <item value="0x02">V-ISM</item>
+      <item value="0x03">X-ISM</item>
+      <item value="0x04">S-ISM</item>
+    </parameter>
+    <script state="run">
+      <action condition="(param==01)">maincpu.pb@FF9123=00</action>
+      <action condition="(param==01)">maincpu.pb@FF9132=00</action>
+      <action condition="(param==02)">maincpu.pb@FF9123=01</action>
+      <action condition="(param==02)">maincpu.pb@FF9132=01</action>
+      <action condition="(param==03)">maincpu.pb@FF9123=FF</action>
+      <action condition="(param==03)">maincpu.pb@FF9132=FF</action>
+      <action condition="(param==04)">maincpu.pb@FF9123=02</action>
+      <action condition="(param==04)">maincpu.pb@FF9132=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P4 Select Character"> <comment>Free player selection - Use on the level VS screen.</comment>
+    <parameter>
+      <item value="0x00">Ryu</item>
+      <item value="0x01">Ken Masters</item>
+      <item value="0x02">Akuma</item>
+      <item value="0x03">Charlie</item>
+      <item value="0x04">Chun-Li</item>
+      <item value="0x05">Adon</item>
+      <item value="0x06">Sodom</item>
+      <item value="0x07">Guy</item>
+      <item value="0x08">Birdie</item>
+      <item value="0x09">Rose</item>
+      <item value="0x0A">M. Bison</item>
+      <item value="0x0B">Sagat</item>
+      <item value="0x0C">Dan Hibiki</item>
+      <item value="0x0D">Sakura Kasugano</item>
+      <item value="0x0E">Rolento Schugerg</item>
+      <item value="0x0F">Dhalsim</item>
+      <item value="0x10">Zangief</item>
+      <item value="0x11">Gen (Sou-ryuu stance)</item>
+      <item value="0x13">#Gen (Ki-ryuu stance)</item>
+      <item value="0x15">#Balrog</item>
+      <item value="0x16">Cammy</item>
+      <item value="0x18">Edmund Honda</item>
+      <item value="0x19">Blanka</item>
+      <item value="0x1A">Rainbow Mika Nanakawa</item>
+      <item value="0x1B">Cody</item>
+      <item value="0x1C">Vega</item>
+      <item value="0x1D">Karin Kanzuki</item>
+      <item value="0x1E">#Juli</item>
+      <item value="0x1F">#Juni</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pb@FF9102=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+
+  <cheat desc="No Background Music">
+    <script state="run">
+      <action>audiocpu.pw@F026=0000</action>
+    </script>
+  </cheat>
+
+  <cheat desc="Hide Background">
+    <script state="on">
+      <action>
+        temp0=maincpu.pb@FF8033, temp1=maincpu.ow@00958C, temp2=maincpu.od@00958E
+      </action>
+    </script>
+    <script state="run">
+      <action>
+        maincpu.pb@FF8033=temp0, maincpu.ow@00958C=temp1, maincpu.od@00958E=temp2
+      </action>
+      <action condition="(maincpu.pw@FF8109 != 0 and maincpu.pd@FF810C == 0)"> <!-- activate only during match -->
+        maincpu.pb@FF8033=0, <!-- BG layers -->
+        maincpu.pw@FFD600=0, <!-- super bars -->
+        maincpu.pw@FFD800=0, <!-- win icons -->
+        maincpu.pw@FFDA00=0, <!-- guard bars -->
+        maincpu.pw@FFDC00=0, <!-- life bars -->
+        maincpu.pw@FFF1C0=0, <!-- flashing text -->
+        maincpu.ow@00958C=4E71, maincpu.od@00958E=4E714E71 <!-- BG sprites -->
+        maincpu.ow@00958C=4E71, maincpu.od@00958E=4E714E71 <!-- BG sprites -->
+      </action>
+    </script>
+    <script state="off">
+      <action>
+        maincpu.pb@FF8033=temp0, maincpu.ow@00958C=temp1, maincpu.od@00958E=temp2
+      </action>
+    </script>
+  </cheat>
+
+  <cheat desc="Select Region"> <comment>This cheat sets the machine region - the effectiveness may vary! You have to enable this ASAP - ON or before the ROM check screen! Or enable + RESET</comment>
+    <parameter>
+      <item value="0x00">Japan</item>
+      <item value="0x02">USA</item>
+      <item value="0x04">Hispanic</item>
+      <item value="0x06">Oceania</item>
+      <item value="0x08">Asia</item>
+      <item value="0x0A">Euro</item>
+      <item value="0x0C">Brazil</item>
+    </parameter>
+    <script state="run">
+      <action>maincpu.pb@FF8091=param</action>
+    </script>
+  </cheat>
+
+  <cheat desc="Sound Test Timer Stop">
+    <script state="run">
+      <action>maincpu.pb@FF800B=FF</action>
+    </script>
+  </cheat>
+
+  <cheat desc="Sound Test">
+    <parameter min="1" max="4095" step="1"/>
+    <script state="change">
+      <action>audiocpu.pw@F015=0000</action>
+      <action>audiocpu.pq@F100=00000000000000FF</action>
+      <action>audiocpu.pq@F108=00FFFF0000000000</action>
+      <action>audiocpu.pq@F110=1000000000000000</action>
+      <action>audiocpu.pq@F118=00FFFF0000000000</action>
+      <action condition="(param LT 100)">audiocpu.pb@F111=param</action>
+      <action>temp0=param/100</action>
+      <action condition="(param GE 100)">audiocpu.pb@F110=temp0</action>
+      <action condition="(param GE 100)">audiocpu.pb@F111=param-(temp0*100)</action>
+      <action>audiocpu.pb@F015=20</action>
+    </script>
+  </cheat>
+
+</mamecheat>
+<!-- Cheat file downloaded from http://www.mamecheat.co.uk, see cheat.txt for list of contributors. -->
